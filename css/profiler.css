@@ -30,3 +30,32 @@ ul.profiler > li > div.view-data > p:first-of-type,
 ul.profiler > li > div.view-data > p:nth-of-type(2) {
   display: inline-block;
 }
+ul.profiler > li > div.view-image {
+  position: absolute;
+  display: block;
+  top: 1px;
+  left: 1px;
+  border-right: 2px solid #cf5e20;
+  width: 120px;
+  height: 120px;
+  background: #ff7537;
+}
+ul.profiler > li > div.view-image > span {
+  display: block;
+  padding: 10px;
+  width: 120px;
+  height: 120px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 100px;
+  text-align: center;
+}
+ul.profiler > li > div.view-image > span[class^="glyphicon-"],
+ul.profiler > li > div.view-image > span[class*=" glyphicon-"] {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
