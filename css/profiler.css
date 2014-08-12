@@ -10,3 +10,23 @@ ul.profiler > li {
   box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
 }
+ul.profiler > li > div.view-data {
+  padding: 10px 50px 10px 130px;
+  width: 100%;
+  height: 120px;
+}
+ul.profiler > li > div.view-data > h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+ul.profiler > li > div.view-data > p {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 200;
+}
+ul.profiler > li > div.view-data > p:first-of-type,
+ul.profiler > li > div.view-data > p:nth-of-type(2) {
+  display: inline-block;
+}
