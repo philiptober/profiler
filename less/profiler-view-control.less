@@ -1,0 +1,142 @@
+ul.profiler > li > div.view-control {
+	position: absolute;
+	top: 1px;
+	right: 0;
+	border-left: 1px solid @lightgrey;
+	width: 41px;
+	height: 120px;
+	z-index: 3;
+	
+	> label {
+		position: absolute;
+		display: block;
+		right: 1px;
+		height: 40px;
+		text-align: center;
+		cursor: pointer;
+		
+		&:first-of-type {
+			top: 0;
+			color: @control-edit-confirm;
+			
+			&:hover {
+				color: @control-edit-confirm-text;
+				background: @control-edit-confirm;
+			}
+		}
+		
+		&:nth-of-type(2) {
+			top: 40px;
+			color: @control-edit-abort;
+			
+			&:hover {
+				color: @control-edit-abort-text;
+				background: @control-edit-abort;
+			}
+			
+			&:active {
+				background: @control-edit-abort-shade;
+			}
+		}
+		
+		&:nth-of-type(3) {
+			top: 80px;
+			padding: 10px;
+			width: 40px;
+			color: @control-delete;
+			font-size: 20px;
+			
+			-webkit-transition: padding 0.5s ease-in,
+								width 0.5s ease-in,
+								font-size 0.5s ease-in;
+			-moz-transition: padding 0.5s ease-in,
+							 width 0.5s ease-in,
+							 font-size 0.5s ease-in;
+			-o-transition: padding 0.5s ease-in,
+						   width 0.5s ease-in,
+						   font-size 0.5s ease-in;
+			transition: padding 0.5s ease-in,
+						width 0.5s ease-in,
+						font-size 0.5s ease-in;
+			
+			&:hover {
+				color: @control-delete-text;
+				background: @control-delete;
+			}
+			
+			&:active {
+				background: @control-delete-shade;
+			}
+		}
+		
+		&:first-of-type,
+		&:nth-of-type(2) {
+			padding: 0;
+			width: 0;
+			font-size: 0;
+			
+			-webkit-transition: padding 0.5s ease-in,
+								width 0.5s ease-in,
+								font-size 0.5s ease-in;
+			-moz-transition: padding 0.5s ease-in,
+							 width 0.5s ease-in,
+							 font-size 0.5s ease-in;
+			-o-transition: padding 0.5s ease-in,
+						   width 0.5s ease-in,
+						   font-size 0.5s ease-in;
+			transition: padding 0.5s ease-in,
+						width 0.5s ease-in,
+						font-size 0.5s ease-in;
+		}
+		
+		&[class^="glyphicon-"],
+		&[class*=" glyphicon-"] {
+			.glyphicons-font;
+		}
+	}
+}
+
+ul.profiler > li > input.control-view:checked ~ div.view-control {
+	
+	> label {
+		
+		&:nth-of-type(3) {
+			padding: 0;
+			width: 0;
+			font-size: 0;
+			
+			-webkit-transition: padding 0.5s ease-in,
+								width 0.5s ease-in,
+								font-size 0.5s ease-in;
+			-moz-transition: padding 0.5s ease-in,
+							 width 0.5s ease-in,
+							 font-size 0.5s ease-in;
+			-o-transition: padding 0.5s ease-in,
+						   width 0.5s ease-in,
+						   font-size 0.5s ease-in;
+			transition: padding 0.5s ease-in,
+						width 0.5s ease-in,
+						font-size 0.5s ease-in;
+		}
+		
+		&:first-of-type,
+		&:nth-of-type(2) {
+			padding: 10px;
+			width: 40px;
+			font-size: 20px;
+			
+			-webkit-transition: padding 0.5s ease-in,
+								width 0.5s ease-in,
+								font-size 0.5s ease-in;
+			-moz-transition: padding 0.5s ease-in,
+							 width 0.5s ease-in,
+							 font-size 0.5s ease-in;
+			-o-transition: padding 0.5s ease-in,
+						   width 0.5s ease-in,
+						   font-size 0.5s ease-in;
+			transition: padding 0.5s ease-in,
+						width 0.5s ease-in,
+						font-size 0.5s ease-in;
+		}
+	}
+}

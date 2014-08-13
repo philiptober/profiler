@@ -127,3 +127,95 @@ ul.profiler > li > div.view-image > span[class*=" glyphicon-"] {
   smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+ul.profiler > li > div.view-control {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  border-left: 1px solid #e6e6e6;
+  width: 41px;
+  height: 120px;
+  z-index: 3;
+}
+ul.profiler > li > div.view-control > label {
+  position: absolute;
+  display: block;
+  right: 1px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+ul.profiler > li > div.view-control > label:first-of-type {
+  top: 0;
+  color: #7bd148;
+}
+ul.profiler > li > div.view-control > label:first-of-type:hover {
+  color: #ffffff;
+  background: #7bd148;
+}
+ul.profiler > li > div.view-control > label:nth-of-type(2) {
+  top: 40px;
+  color: #f83a22;
+}
+ul.profiler > li > div.view-control > label:nth-of-type(2):hover {
+  color: #ffffff;
+  background: #f83a22;
+}
+ul.profiler > li > div.view-control > label:nth-of-type(2):active {
+  background: #c62e1b;
+}
+ul.profiler > li > div.view-control > label:nth-of-type(3) {
+  top: 80px;
+  padding: 10px;
+  width: 40px;
+  color: #f83a22;
+  font-size: 20px;
+  -webkit-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -moz-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -o-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+}
+ul.profiler > li > div.view-control > label:nth-of-type(3):hover {
+  color: #ffffff;
+  background: #f83a22;
+}
+ul.profiler > li > div.view-control > label:nth-of-type(3):active {
+  background: #c62e1b;
+}
+ul.profiler > li > div.view-control > label:first-of-type,
+ul.profiler > li > div.view-control > label:nth-of-type(2) {
+  padding: 0;
+  width: 0;
+  font-size: 0;
+  -webkit-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -moz-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -o-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+}
+ul.profiler > li > div.view-control > label[class^="glyphicon-"],
+ul.profiler > li > div.view-control > label[class*=" glyphicon-"] {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul.profiler > li > input.control-view:checked ~ div.view-control > label:nth-of-type(3) {
+  padding: 0;
+  width: 0;
+  font-size: 0;
+  -webkit-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -moz-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -o-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+}
+ul.profiler > li > input.control-view:checked ~ div.view-control > label:first-of-type,
+ul.profiler > li > input.control-view:checked ~ div.view-control > label:nth-of-type(2) {
+  padding: 10px;
+  width: 40px;
+  font-size: 20px;
+  -webkit-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -moz-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -o-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+}
