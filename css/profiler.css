@@ -10,6 +10,74 @@ ul.profiler > li {
   box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
 }
+ul.profiler > li > input.control-view,
+ul.profiler > li > input.control-edit,
+ul.profiler > li > input.control-delete {
+  position: absolute;
+  top: 48px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+  -webkit-transition: top 0.5s ease-in;
+  -moz-transition: top 0.5s ease-in;
+  -o-transition: top 0.5s ease-in;
+  transition: top 0.5s ease-in;
+}
+ul.profiler > li > label:first-of-type {
+  position: absolute;
+  display: block;
+  top: 41px;
+  right: 1px;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  color: #fad165;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 4;
+  -webkit-transition: top 0.5s ease-in;
+  -moz-transition: top 0.5s ease-in;
+  -o-transition: top 0.5s ease-in;
+  transition: top 0.5s ease-in;
+}
+ul.profiler > li > label:first-of-type[class^="glyphicon-"],
+ul.profiler > li > label:first-of-type[class*=" glyphicon-"] {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul.profiler > li > label:first-of-type:hover {
+  color: #ffffff;
+  background: #fad165;
+}
+ul.profiler > li > label:first-of-type:active {
+  background: #e1bc37;
+}
+ul.profiler > li > input.control-view:checked {
+  top: 88px;
+  -webkit-transition: top 0.5s ease-in;
+  -moz-transition: top 0.5s ease-in;
+  -o-transition: top 0.5s ease-in;
+  transition: top 0.5s ease-in;
+}
+ul.profiler > li > input.control-view:checked ~ label:first-of-type {
+  top: 81px;
+  color: #ffffff;
+  background: #fad165;
+  z-index: 2;
+  -webkit-transition: top 0.5s ease-in, z-index 0.5s ease-in;
+  -moz-transition: top 0.5s ease-in, z-index 0.5s ease-in;
+  -o-transition: top 0.5s ease-in, z-index 0.5s ease-in;
+  transition: top 0.5s ease-in, z-index 0.5s ease-in;
+}
+ul.profiler > li > input.control-view:checked ~ label:first-of-type:active {
+  background: #e1bc37;
+}
 ul.profiler > li > div.view-data {
   padding: 10px 50px 10px 130px;
   width: 100%;

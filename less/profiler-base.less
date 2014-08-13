@@ -9,5 +9,84 @@ ul.profiler {
 		border: 1px solid @google-orange-shade;
 		box-shadow: 0px 0px 5px rgb(51, 51, 51);
 		box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+		
+		> input.control-view,
+		> input.control-edit,
+		> input.control-delete {
+			position: absolute;
+			top: 48px;
+			right: 10px;
+			width: 0;
+			height: 0;
+			-webkit-appearance: none;
+			
+			-webkit-transition: top 0.5s ease-in;
+			-moz-transition: top 0.5s ease-in;
+			-o-transition: top 0.5s ease-in;
+			transition: top 0.5s ease-in;
+		}
+		
+		> label:first-of-type {
+			position: absolute;
+			display: block;
+			top: 41px;
+			right: 1px;
+			padding: 10px;
+			width: 40px;
+			height: 40px;
+			color: @control-edit;
+			font-size: 20px;
+			text-align: center;
+			cursor: pointer;
+			z-index: 4;
+			
+			-webkit-transition: top 0.5s ease-in;
+			-moz-transition: top 0.5s ease-in;
+			-o-transition: top 0.5s ease-in;
+			transition: top 0.5s ease-in;
+			
+			&[class^="glyphicon-"],
+			&[class*=" glyphicon-"] {
+				.glyphicons-font;
+			}
+			
+			&:hover {
+				color: @control-edit-text;
+				background: @control-edit;
+			}
+			
+			&:active {
+				background: @control-edit-shade;
+			}
+		}
+		
+		> input.control-view:checked {
+			top: 88px;
+			
+			-webkit-transition: top 0.5s ease-in;
+			-moz-transition: top 0.5s ease-in;
+			-o-transition: top 0.5s ease-in;
+			transition: top 0.5s ease-in;
+			
+			~ label:first-of-type {
+				top: 81px;
+				color: @control-edit-text;
+				background: @control-edit;
+				z-index: 2;
+				
+				-webkit-transition: top 0.5s ease-in, 
+									z-index 0.5s ease-in;
+				-moz-transition: top 0.5s ease-in, 
+								 z-index 0.5s ease-in;
+				-o-transition: top 0.5s ease-in, 
+							   z-index 0.5s ease-in;
+				transition: top 0.5s ease-in, 
+							z-index 0.5s ease-in;
+				
+				&:active {
+					background: @control-edit-shade;
+				}
+			}
+		}
 	}
 }
