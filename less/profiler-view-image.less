@@ -23,4 +23,93 @@ ul.profiler > li > div.view-image {
 			.glyphicons-font;
 		}
 	}
+	
+	> input {
+		position: absolute;
+		display: none;
+		top: 0;
+		left: 0;
+		border: none;
+		padding: 0;
+		width: 0;
+		height: 0;
+		background: transparent;
+		color: #fff;
+		font-size: 0;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 100px;
+		line-height: 1;
+		text-align: center;
+	}
+	
+	> label {
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		border: none;
+		padding: 0;
+		width: 0;
+		height: 120px;
+		background: transparent;
+		color: #fff;
+		font-size: 0;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1;
+		text-align: center;
+		
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			border: none;
+			padding: 0;
+			width: 0;
+			background: transparent;
+			font-size: 0;
+		}
+		
+		&[class^="glyphicon-"],
+		&[class*=" glyphicon-"] {
+			.glyphicons-font;
+		}
+	}
+}
+
+ul.profiler > li > input.control-view:checked ~ div.view-image {
+	
+	> label {
+		padding: 95px 0 0 5px;
+		width: 100%;
+		color: rgba(0, 0, 0, 0.5);
+		font-size: 18px;
+		text-align: left;
+		z-index: 3;
+		
+		&:hover {
+			background: rgba(0, 0, 0, 0.7);
+			color: #fff;
+			
+			&::before {
+				color: rgba(120, 120, 120, 0.7);
+				font-size: 60px;
+			}
+		}
+		
+		&:active {
+			
+			&::before {
+				color: rgba(150, 150, 150, 0.7);
+				font-size: 60px;
+			}
+		}
+		
+		&::before {
+			margin: 30px;
+			width: 60px;
+			height: 60px;
+		}
+	}
 }
