@@ -1,0 +1,136 @@
+ul.profiler > li > div.view-edit {
+	position: absolute;
+	top: 6px;
+	left: 130px;
+	width: 0;
+	
+	-webkit-transition: width 0.5s ease-in;
+	-moz-transition: width 0.5s ease-in;
+	-o-transition: width 0.5s ease-in;
+    transition: width 0.5s ease-in;
+	
+	> input {
+		position: absolute;
+		border: none;
+		padding: 0;
+		z-index: 1;
+		
+		-webkit-transition: border 0.5s ease-in, 
+							padding 0.5s ease-in;
+		-moz-transition: border 0.5s ease-in, 
+						 padding 0.5s ease-in;
+		-o-transition: border 0.5s ease-in, 
+					   padding 0.5s ease-in;
+		transition: border 0.5s ease-in, 
+					padding 0.5s ease-in;
+		
+		&:first-of-type {
+			top: 0;
+			left: 0;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			height: 32px;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		
+		&:nth-of-type(2) {
+			left: 0;
+		}
+		
+		&:nth-of-type(3) {
+			left: 50%;
+		}
+		
+		&:nth-of-type(4) {
+			left: 0;
+			border-bottom-right-radius: 0;
+		}
+		
+		&:last-of-type {
+			left: 50%;
+			border-bottom-left-radius: 0;
+		}
+		
+		&:nth-of-type(2),
+		&:nth-of-type(3) {
+			top: 32px;
+			border-radius: 0;
+			
+			&:focus {
+				border-top: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+			}
+		}
+		
+		&:nth-of-type(2),
+		&:nth-of-type(4) {
+			
+			&:focus {
+				border-right: 1px solid #ccc;
+			}
+		}
+		
+		&:nth-of-type(4),
+		&:last-of-type {
+			top: 58px;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+		
+		&:nth-of-type(2),
+		&:nth-of-type(3),
+		&:nth-of-type(4),
+		&:last-of-type {
+			display: inline-block;
+			height: 26px;
+			font-size: 20px;
+			font-weight: 200;
+		}
+		
+		&:focus {
+			z-index: 2;
+		}
+	}
+}
+
+ul.profiler > li > input.control-view:checked ~ div.view-edit {
+	width: 50%;
+	
+	-webkit-transition: width 0.5s ease-in;
+	-moz-transition: width 0.5s ease-in;
+	-o-transition: width 0.5s ease-in;
+    transition: width 0.5s ease-in;
+	
+	> input {
+		border: 1px solid #ccc;
+		padding: 0 12px;
+		
+		-webkit-transition: border 0.5s ease-in, 
+							padding 0.5s ease-in;
+		-moz-transition: border 0.5s ease-in, 
+						 padding 0.5s ease-in;
+		-o-transition: border 0.5s ease-in, 
+					   padding 0.5s ease-in;
+		transition: border 0.5s ease-in, 
+					padding 0.5s ease-in;
+		
+		&:nth-of-type(2),
+		&:nth-of-type(3) {
+			border-top: none;
+			border-bottom: none;
+		}
+		
+		&:nth-of-type(2),
+		&:nth-of-type(4) {
+			border-right: none;
+		}
+		
+		&:nth-of-type(2),
+		&:nth-of-type(3),
+		&:nth-of-type(4),
+		&:last-of-type {
+			width: 50%;
+		}
+	}
+}
