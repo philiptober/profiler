@@ -1,0 +1,117 @@
+ul.profiler > li > div.confirm-edit {
+	-webkit-transition: width 0.5s ease-in 0.5s;
+	-moz-transition: width 0.5s ease-in 0.5s;
+	-o-transition: width 0.5s ease-in 0.5s;
+    transition: width 0.5s ease-in 0.5s;
+	
+	> label {
+		-webkit-transition: border 0.5s ease-in 0.5s;
+		-moz-transition: border 0.5s ease-in 0.5s;
+		-o-transition: border 0.5s ease-in 0.5s;
+		transition: border 0.5s ease-in 0.5s
+	}
+	
+	> p,
+	> label {
+		-webkit-transition: font-size 0.5s ease-in 0.5s;
+		-moz-transition: font-size 0.5s ease-in 0.5s;
+		-o-transition: font-size 0.5s ease-in 0.5s;
+		transition: font-size 0.5s ease-in 0.5s;
+	}
+}
+
+ul.profiler > li > div.confirm-edit,
+ul.profiler > li > div.confirm-delete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 122px;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 6;
+	
+	> p {
+		position: relative;
+		top: 20px;
+		width: 100%;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	> label {
+		position: relative;
+		display: inline-block;
+		top: 20px;
+		border: none;
+		width: 25%;
+		font-weight: normal;
+		text-align: center;
+		
+		&:first-of-type {
+			margin-left: 23%;
+			margin-right: 2%;
+		}
+		
+		&:nth-of-type(2) {
+			margin-left: 2%;
+		}
+		
+		&:hover {
+			color: rgba(0, 0, 0, 0.5);
+			background: #fff;
+		}
+	}
+	
+	> p,
+	> label {
+		border-radius: 4px;
+		color: #fff;
+		font-size: 0;
+	}
+}
+
+ul.profiler > li > input.control-edit:checked ~ div.confirm-edit,
+ul.profiler > li > input.control-delete:checked ~ div.confirm-delete {
+	width: 100%;
+	
+	> p {
+		font-size: 30px;
+	}
+	
+	> label {
+		border: 1px solid #fff;
+		font-size: 20px;
+		
+		&:active {
+			background: rgba(255,255,255,0.7);
+		}
+	}
+}
+
+ul.profiler > li > div.confirm-delete,
+ul.profiler > li > input.control-view:checked ~ div.confirm-edit,
+ul.profiler > li > input.control-edit:checked ~ div.confirm-edit,
+ul.profiler > li > input.control-delete:checked ~ div.confirm-delete {
+	-webkit-transition: width 0.5s ease-in;
+	-moz-transition: width 0.5s ease-in;
+	-o-transition: width 0.5s ease-in;
+    transition: width 0.5s ease-in;
+	
+	> p {
+		-webkit-transition: font-size 0.5s ease-in;
+		-moz-transition: font-size 0.5s ease-in;
+		-o-transition: font-size 0.5s ease-in;
+		transition: font-size 0.5s ease-in;
+	}
+	
+	> label {
+		-webkit-transition: border-width 0.5s ease-in, 
+							font-size 0.5s ease-in;
+		-moz-transition: border-width 0.5s ease-in, 
+						 font-size 0.5s ease-in;
+		-o-transition: border-width 0.5s ease-in, 
+					   font-size 0.5s ease-in;
+		transition: border-width 0.5s ease-in, 
+					font-size 0.5s ease-in;
+	}
+}
