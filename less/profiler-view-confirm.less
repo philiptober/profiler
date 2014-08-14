@@ -4,19 +4,22 @@ ul.profiler > li > div.confirm-edit {
 	-o-transition: width 0.5s ease-in 0.5s;
     transition: width 0.5s ease-in 0.5s;
 	
-	> label {
-		-webkit-transition: border 0.5s ease-in 0.5s;
-		-moz-transition: border 0.5s ease-in 0.5s;
-		-o-transition: border 0.5s ease-in 0.5s;
-		transition: border 0.5s ease-in 0.5s
-	}
-	
-	> p,
-	> label {
+	> p {
 		-webkit-transition: font-size 0.5s ease-in 0.5s;
 		-moz-transition: font-size 0.5s ease-in 0.5s;
 		-o-transition: font-size 0.5s ease-in 0.5s;
 		transition: font-size 0.5s ease-in 0.5s;
+	}
+	
+	> label {
+		-webkit-transition: border 0.5s ease-in 0.5s,
+							font-size 0.5s ease-in 0.5s;
+		-moz-transition: border 0.5s ease-in 0.5s,
+						 font-size 0.5s ease-in 0.5s;
+		-o-transition: border 0.5s ease-in 0.5s,
+					   font-size 0.5s ease-in 0.5s;
+		transition: border 0.5s ease-in 0.5s,
+					font-size 0.5s ease-in 0.5s;
 	}
 }
 
