@@ -38,101 +38,91 @@ ul.profiler > li > div.view-data {
 			border-right: 15px solid @google-orange-shade;
 			border-bottom: 2px solid @google-orange-shade;
 			border-left: 15px solid @google-orange-shade;
-			padding: 0;
 			width: auto;
 			height: 30px;
 			font-size: 0;
 			font-weight: normal;
 			vertical-align: middle;
 			
-			-webkit-transition: border-right 0s ease-in 0.5s,
-								padding 0.25s ease-in,
+			-webkit-transition: padding 0.25s ease-in,
 								font-size 0.25s ease-in;
-			-moz-transition: border-right 0s ease-in 0.5s,
-							 padding 0.25s ease-in,
+			-moz-transition: padding 0.25s ease-in,
 							 font-size 0.25s ease-in;
-			-o-transition: border-right 0s ease-in 0.5s,
-						   padding 0.25s ease-in,
+			-o-transition: padding 0.25s ease-in,
 						   font-size 0.25s ease-in;
-			transition: border 0s ease-in 0.5s,
-						padding 0.25s ease-in,
+			transition: padding 0.25s ease-in,
 						font-size 0.25s ease-in;
 			
 			&[class^="glyphicon-"],
 			&[class*=" glyphicon-"] {
-			
-				&:hover {
-					padding: 0 10px 0 25px;
-					font-size: 18px;
-					
-					-webkit-transition: padding 0.25s ease-in 0.15s, 
-										width 0.25s ease-in 0.15s, 
-										font-size 0.25s ease-in 0.15s;
-					-moz-transition: padding 0.25s ease-in 0.15s, 
-									 width 0.25s ease-in 0.15s, 
-									 font-size 0.25s ease-in 0.15s;
-					-o-transition: padding 0.25s ease-in 0.15s, 
-								   width 0.25s ease-in 0.15s, 
-								   font-size 0.25s ease-in 0.15s;
-					transition: padding 0.25s ease-in 0.15s, 
-								width 0.25s ease-in 0.15s, 
-								font-size 0.25s ease-in 0.15s;
-					
-					&::before {
-						background: @google-orange-shade;
-						color: @google-orange-text;
-						
-						-webkit-transition: left 0.25s ease-in 0.15s, 
-											background 0.15s ease-in, 
-											color 0.15s ease-in;
-						-moz-transition: left 0.25s ease-in 0.15s, 
-										 background 0.15s ease-in, 
-										 color 0.15s ease-in;
-						-o-transition: left 0.25s ease-in 0.15s, 
-									   background 0.15s ease-in, 
-									   color 0.15s ease-in;
-						transition: left 0.25s ease-in 0.15s, 
-									background 0.15s ease-in, 
-									color 0.15s ease-in;
-					}
-				}
-			
+				
 				&::before {
-					position: absolute;
-					display: block;
-					top: -2px;
-					left: -15px;
-					border-bottom: 1px solid @google-orange-shade;
-					padding: 6px;
-					width: 30px;
-					height: 30px;
-					background: #fff;
-					color: @google-orange-shade;
 					.glyphicons-font;
-					font-size: 18px;
-					text-align: center;
-	
-					-webkit-transition: left 0s ease-in 0.5s,
-										border 0s ease-in 0.5s,
-										background 0.15s ease-in 0.25s, 
-										color 0.15s ease-in 0.25s,
-										font-size 0.5s ease-in;
-					-moz-transition: left 0s ease-in 0.5s,
-									 border 0s ease-in 0.5s,
-									 background 0.15s ease-in 0.25s, 
-									 color 0.15s ease-in 0.25s,
-									 font-size 0.5s ease-in;
-					-o-transition: left 0s ease-in 0.5s,
-								   border 0s ease-in 0.5s,
-								   background 0.15s ease-in 0.25s, 
-								   color 0.15s ease-in 0.25s,
-								   font-size 0.5s ease-in;
-					transition: left 0s ease-in 0.5s,
-								border 0s ease-in 0.5s,
-								background 0.15s ease-in 0.25s, 
-								color 0.15s ease-in 0.25s,
-								font-size 0.5s ease-in;
 				}
+			}
+			
+			&:hover {
+				padding: 0 10px 0 25px;
+				font-size: 18px;
+				
+				-webkit-transition: padding 0.25s ease-in 0.15s, 
+									width 0.25s ease-in 0.15s, 
+									font-size 0.25s ease-in 0.15s;
+				-moz-transition: padding 0.25s ease-in 0.15s, 
+								 width 0.25s ease-in 0.15s, 
+								 font-size 0.25s ease-in 0.15s;
+				-o-transition: padding 0.25s ease-in 0.15s, 
+							   width 0.25s ease-in 0.15s, 
+							   font-size 0.25s ease-in 0.15s;
+				transition: padding 0.25s ease-in 0.15s, 
+							width 0.25s ease-in 0.15s, 
+							font-size 0.25s ease-in 0.15s;
+				
+				&::before {
+					background: @google-orange-shade;
+					color: @google-orange-text;
+					
+					-webkit-transition: left 0.25s ease-in 0.15s, 
+										background 0.15s ease-in, 
+										color 0.15s ease-in;
+					-moz-transition: left 0.25s ease-in 0.15s, 
+									 background 0.15s ease-in, 
+									 color 0.15s ease-in;
+					-o-transition: left 0.25s ease-in 0.15s, 
+								   background 0.15s ease-in, 
+								   color 0.15s ease-in;
+					transition: left 0.25s ease-in 0.15s, 
+								background 0.15s ease-in, 
+								color 0.15s ease-in;
+				}
+			}
+		
+			&::before {
+				position: absolute;
+				display: block;
+				top: -2px;
+				left: -15px;
+				border-bottom: 1px solid @google-orange-shade;
+				padding: 6px;
+				width: 30px;
+				height: 30px;
+				background: #fff;
+				color: @google-orange-shade;
+				font-size: 18px;
+				text-align: center;
+
+				-webkit-transition: background 0.15s ease-in 0.25s, 
+									color 0.15s ease-in 0.25s,
+									font-size 0.4s ease-in;
+				-moz-transition: background 0.15s ease-in 0.25s, 
+								 color 0.15s ease-in 0.25s,
+								 font-size 0.4s ease-in;
+				-o-transition: background 0.15s ease-in 0.25s, 
+							   color 0.15s ease-in 0.25s,
+							   font-size 0.4s ease-in;
+				transition: background 0.15s ease-in 0.25s, 
+							color 0.15s ease-in 0.25s,
+							font-size 0.4s ease-in;
 			}
 		}
 	}
@@ -141,44 +131,27 @@ ul.profiler > li > div.view-data {
 ul.profiler > li > input.control-view:checked ~ div.view-data {
 	
 	> ul {
+		z-index: -1;
 		
 		> li {
 			border: 0;
 			width: 30px;
-			height: 0;
-			
-			-webkit-transition: border 0.5s ease-in,
-								height 0.5s ease-in;
-			-moz-transition: border 0.5s ease-in,
-							 height 0.5s ease-in;
-			-o-transition: border 0.5s ease-in,
-						   height 0.5s ease-in;
-			transition: border 0.5s ease-in,
-						height 0.5s ease-in;
+			height: 30px;
+			font-size: 0;
 			
 			&::before {
+				top: 0;
 				left: 0;
 				border: 0;
 				padding: 0;
 				height: 0;
+				width: 30px;
 				font-size: 0;
 				
-				-webkit-transition: border 0.5s ease-in,
-									padding 0.5s ease-in,
-									height 0.5s ease-in,
-									font-size 0.5s ease-in;
-				-moz-transition: border 0.5s ease-in,
-								 padding 0.5s ease-in,
-								 height 0.5s ease-in,
-								 font-size 0.5s ease-in;
-				-o-transition: border 0.5s ease-in,
-							   padding 0.5s ease-in,
-							   height 0.5s ease-in,
-							   font-size 0.5s ease-in;
-				transition: border 0.5s ease-in,
-							padding 0.5s ease-in,
-							height 0.5s ease-in,
-							font-size 0.5s ease-in;
+				-webkit-transition: font-size 0.35s ease-in;
+				-moz-transition: font-size 0.35s ease-in;
+				-o-transition: font-size 0.35s ease-in;
+				transition: font-size 0.35s ease-in;
 			}
 		}
 	}
