@@ -59,3 +59,23 @@ $( document ).on('click', 'ul.profiler > li > div.view-roles > ul:nth-of-type(2)
 $( document ).on('change', 'ul.profiler > li > div.view-image > input', function() {
 	$( this ).parent().children('label')[0].innerText = $( this )[0].files[0].name;
 });
+
+
+
+if (!('placeholder' in document.createElement('input'))) {
+  $("[placeholder]").on('focus',function() {
+		var a = $(this);
+		if (a.val() == a.attr("placeholder"))
+			a.val("").css('color','rgb(85, 85, 85)');
+	}).on('blur',function() {
+		var a = $(this);
+		if (a.val() == "" || a.val() == a.attr("placeholder"))
+			a.val(a.attr("placeholder")).css('color','#999');
+	}).on('blur().parents("form").submit',function() {
+		$(this).find("[placeholder]").each(function() {
+			var a = $(this);
+			if (a.val() == a.attr("placeholder"))
+				a.val("");
+		});
+	});
+};

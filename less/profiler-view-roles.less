@@ -170,6 +170,9 @@ ul.profiler > li > div.view-roles {
 				transition: font-size 0.35s ease-in;
 				
 				&::before {
+					-webkit-transition: font-size 0.35s ease-in;
+					-moz-transition: font-size 0.35s ease-in;
+					-o-transition: font-size 0.35s ease-in;
 					transition: font-size 0.35s ease-in;
 				}
 			}
@@ -353,7 +356,7 @@ ul.profiler > li.checked > input.control-view:checked ~ div.view-roles {
 	> ul {
 		
 		&:first-of-type {
-			top: initial;
+			top: auto;
 			bottom: 10px;
 			left: 4%;
 			border-radius: 4px;
@@ -522,6 +525,7 @@ ul.profiler > li.checked > input.control-view:checked ~ div.view-roles {
 					margin-right: 5px;
 					margin-left: 5px;
 					padding-top: 5px;
+					-webkit-padding-before: 4px;
 					width: 25px;
 					height: 25px;
 					font-size: 17px;
