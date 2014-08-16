@@ -410,6 +410,7 @@ ul.profiler > li > div.view-roles {
   padding: 0;
   width: 100%;
   height: 0;
+  background: rgba(40, 40, 40, 0.9);
   -webkit-transition: padding 0.35s ease-in, height 0.35s ease-in, min-height 0.35s ease-in, z-index 0.35s ease-in;
   -moz-transition: padding 0.35s ease-in, height 0.35s ease-in, min-height 0.35s ease-in, z-index 0.35s ease-in;
   -o-transition: padding 0.35s ease-in, height 0.35s ease-in, min-height 0.35s ease-in, z-index 0.35s ease-in;
@@ -478,15 +479,6 @@ ul.profiler > li > div.view-roles > ul:first-of-type > li.roles-add::before {
   -o-transition: width 0 linear 0.35s, background 0, color 0, font-size 0.35s ease-in;
   transition: width 0 linear 0.35s, background 0, color 0, font-size 0.35s ease-in;
 }
-ul.profiler > li > div.view-roles > ul:first-of-type > li[class^="glyphicon-"]::before,
-ul.profiler > li > div.view-roles > ul:first-of-type > li[class*=" glyphicon-"]::before {
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 ul.profiler > li > div.view-roles > ul:first-of-type > li::before {
   position: absolute;
   display: block;
@@ -504,6 +496,39 @@ ul.profiler > li > div.view-roles > ul:first-of-type > li::before {
   -moz-transition: font-size 0.35s ease-in;
   -o-transition: font-size 0.35s ease-in;
   transition: font-size 0.35s ease-in;
+}
+ul.profiler > li > div.view-roles > ul:nth-of-type(2) {
+  position: relative;
+  top: auto;
+  border: 0;
+  padding: 0;
+  height: 0;
+  font-size: 0;
+  -webkit-transition: height 0.35s ease-in;
+  -moz-transition: height 0.35s ease-in;
+  -o-transition: height 0.35s ease-in;
+  transition: height 0.35s ease-in;
+}
+ul.profiler > li > div.view-roles > ul:nth-of-type(2) > li {
+  color: #fff;
+  font-size: 0;
+  list-style-type: none;
+  -webkit-transition: font-size 0.35s ease-in;
+  -moz-transition: font-size 0.35s ease-in;
+  -o-transition: font-size 0.35s ease-in;
+  transition: font-size 0.35s ease-in;
+}
+ul.profiler > li > div.view-roles > ul:nth-of-type(2) > li::before {
+  transition: font-size 0.35s ease-in;
+}
+ul.profiler > li > div.view-roles > ul > li[class^="glyphicon-"]::before,
+ul.profiler > li > div.view-roles > ul > li[class*=" glyphicon-"]::before {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 ul.profiler > li > input.control-view:checked ~ div.view-roles > ul {
   z-index: 2;
@@ -567,6 +592,160 @@ ul.profiler > li > input.control-view:checked ~ div.view-roles > ul:first-of-typ
   -moz-transition: background 0.15s ease-in 0.25s, color 0.15s ease-in 0.25s, font-size 0.4s ease-in;
   -o-transition: background 0.15s ease-in 0.25s, color 0.15s ease-in 0.25s, font-size 0.4s ease-in;
   transition: background 0.15s ease-in 0.25s, color 0.15s ease-in 0.25s, font-size 0.4s ease-in;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles {
+  padding: 45px 4% 46px;
+  height: auto;
+  min-height: 122px;
+  z-index: 6;
+  -webkit-transition: padding 0.35s ease-in, height 0.35s ease-in, min-height 0.35s ease-in;
+  -moz-transition: padding 0.35s ease-in, height 0.35s ease-in, min-height 0.35s ease-in;
+  -o-transition: padding 0.35s ease-in, height 0.35s ease-in, min-height 0.35s ease-in;
+  transition: padding 0.35s ease-in, height 0.35s ease-in, min-height 0.35s ease-in;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > h1 {
+  border-bottom: 2px solid #fff;
+  padding: 5px, 2px, 0;
+  height: 35px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  -webkit-transition: padding 0.35s ease-in, height 0.35s ease-in, font-size 0.35s ease-in;
+  -moz-transition: padding 0.35s ease-in, height 0.35s ease-in, font-size 0.35s ease-in;
+  -o-transition: padding 0.35s ease-in, height 0.35s ease-in, font-size 0.35s ease-in;
+  transition: padding 0.35s ease-in, height 0.35s ease-in, font-size 0.35s ease-in;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:first-of-type {
+  top: initial;
+  bottom: 10px;
+  left: 4%;
+  border-radius: 4px;
+  padding: 3px;
+  width: 92%;
+  height: 36px;
+  background: #fff;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:first-of-type > li {
+  border-right-width: 0;
+  border-left-width: 30px;
+  border-color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: border-right 0.25s ease-in, padding 0.25s ease-in, font-size 0.25s ease-in;
+  -moz-transition: border-right 0.25s ease-in, padding 0.25s ease-in, font-size 0.25s ease-in;
+  -o-transition: border-right 0.25s ease-in, padding 0.25s ease-in, font-size 0.25s ease-in;
+  transition: border-right 0.25s ease-in, padding 0.25s ease-in, font-size 0.25s ease-in;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:first-of-type > li.roles-add {
+  margin-right: 0;
+  width: 30px;
+  float: right;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:first-of-type > li.roles-add:hover::before {
+  background: rgba(0, 0, 0, 0.7);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #fff;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:first-of-type > li.roles-add:active::before {
+  background: rgba(0, 0, 0, 0.4);
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:first-of-type > li.roles-add::before {
+  top: 0;
+  left: 0px;
+  padding: 6px 2px 2px;
+  width: 30px;
+  color: rgba(0, 0, 0, 0.7);
+  content: "\e013";
+  -webkit-transition: background 0,
+											color 0;
+  -moz-transition: background 0,
+										 color 0;
+  -o-transition: background 0,
+									   color 0;
+  transition: background 0,
+									color 0;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:first-of-type > li:first-of-type {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:first-of-type > li:hover {
+  border-right-width: 15px;
+  border-right-color: rgba(0, 0, 0, 0.7);
+  padding: 0 10px;
+  -webkit-transition: border-right 0.25s ease-in 0.15s, padding 0.25s ease-in 0.15s, width 0.25s ease-in 0.15s, font-size 0.25s ease-in 0.15s;
+  -moz-transition: border-right 0.25s ease-in 0.15s, padding 0.25s ease-in 0.15s, width 0.25s ease-in 0.15s, font-size 0.25s ease-in 0.15s;
+  -o-transition: border-right 0.25s ease-in 0.15s, padding 0.25s ease-in 0.15s, width 0.25s ease-in 0.15s, font-size 0.25s ease-in 0.15s;
+  transition: border-right 0.25s ease-in 0.15s, padding 0.25s ease-in 0.15s, width 0.25s ease-in 0.15s, font-size 0.25s ease-in 0.15s;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:first-of-type > li:hover::before {
+  background: transparent;
+  color: #fff;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:first-of-type > li::before {
+  left: -30px;
+  border: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:nth-of-type(2) {
+  height: auto;
+  -webkit-transition: height 0.35s ease-in;
+  -moz-transition: height 0.35s ease-in;
+  -o-transition: height 0.35s ease-in;
+  transition: height 0.35s ease-in;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:nth-of-type(2) > li {
+  position: relative;
+  display: inline-block;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding-left: 36px;
+  width: 32%;
+  font-size: 18px;
+  -webkit-transition: font-size 0.35s ease-in;
+  -moz-transition: font-size 0.35s ease-in;
+  -o-transition: font-size 0.35s ease-in;
+  transition: font-size 0.35s ease-in;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:nth-of-type(2) > li.checked {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.7);
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:nth-of-type(2) > li.checked:active {
+  background: rgba(255, 255, 255, 0.7);
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:nth-of-type(2) > li:nth-of-type(3n) {
+  margin-right: 0;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:nth-of-type(2) > li:not( :nth-of-type(n+3)) {
+  margin-top: 2%;
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:nth-of-type(2) > li:hover {
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 230, 0.75);
+  -moz-box-shadow: 0px 0px 15px 3px rgba(255, 255, 230, 0.75);
+  -o-box-shadow: 0px 0px 15px 3px rgba(255, 255, 230, 0.75);
+  box-shadow: 0px 0px 15px 3px rgba(255, 255, 230, 0.75);
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:nth-of-type(2) > li:active {
+  background: rgba(40, 40, 40, 0.6);
+}
+ul.profiler > li.checked > input.control-view:checked ~ div.view-roles > ul:nth-of-type(2) > li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-top: 5px;
+  width: 25px;
+  height: 25px;
+  font-size: 17px;
+  text-align: center;
+  -webkit-transition: font-size 0.35s ease-in;
+  -moz-transition: font-size 0.35s ease-in;
+  -o-transition: font-size 0.35s ease-in;
+  transition: font-size 0.35s ease-in;
 }
 ul.profiler > li > div.view-control {
   position: absolute;
