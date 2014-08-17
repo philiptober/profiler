@@ -1,0 +1,298 @@
+@font-face {
+  font-family: 'Shadows Into Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Shadows Into Light'), local('ShadowsIntoLight'), url(http://fonts.gstatic.com/s/shadowsintolight/v5/clhLqOv7MXn459PTh0gXYFK2TSYBz0eNcHnp4YqE4Ts.woff2) format('woff2'), url(http://fonts.gstatic.com/s/shadowsintolight/v5/clhLqOv7MXn459PTh0gXYHW1xglZCgocDnD_teV2lMU.woff) format('woff');
+}
+
+body {
+	margin-top: 70px;
+	overflow-x: hidden;
+}
+nav.navbar {
+	border-radius: 0;
+	height: 57px;
+}
+nav.navbar-gh-pages {
+	height: 55px;
+	background: rgb(40, 40, 40);
+}
+nav.navbar-gh-pages > div.container {
+	padding: 0 3%;
+}
+nav.navbar-gh-pages > div.container > div.navbar-header > a.navbar-brand {
+	position: relative;
+	padding: 15px 25px;
+	height: 55px;
+	color: #fff;
+	
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 30px;
+	font-weight: bold;
+	z-index: 3;
+	
+	-webkit-transform: rotate(-5deg) skew(5deg,2.5deg);
+	-moz-transform: rotate(-5deg) skew(5deg,2.5deg);
+	-o-transform: rotate(-5deg) skew(5deg,2.5deg);
+	transform: rotate(-5deg) skew(5deg,2.5deg);
+}
+nav.navbar-gh-pages > div.container > div.navbar-header > a.navbar-brand::before {
+	position: absolute;
+	top: -25px;
+	border-top-left-radius: 60px;
+	border-bottom-left-radius: 60px;
+	width: 60px;
+	height: 120px;
+	background: #cca6ac;
+	z-index: -1;
+	content: " ";
+	
+	-webkit-transform: scaleY(0.2) rotate(-80deg) skew(30deg,20deg);
+	-moz-transform: scaleY(0.2) rotate(-80deg) skew(30deg,20deg);
+	-o-transform: scaleY(0.2) rotate(-80deg) skew(30deg,20deg);
+	transform: scaleY(0.2) rotate(-80deg) skew(30deg,20deg);
+}
+nav.navbar-gh-pages > div.container > div.navbar-header > button > span {
+	background-color: rgb(170, 170, 170);
+}
+nav.navbar-gh-pages > div.container > div.navbar-header > button:hover > span {
+	background-color: rgb(230, 230, 230);
+}
+nav.navbar-gh-pages > div.container > div.navbar-header > button:active > span {
+	background-color: rgb(200, 200, 200);
+}
+nav.navbar-gh-pages > div.container > div.collapse > ul,
+nav.navbar-gh-pages > div.container > div.collapse > ul  > li {
+	height: 55px;
+}
+nav.navbar-gh-pages > div.container > div.collapse > ul  > li {
+	padding: 15px 0;
+}
+nav.navbar-gh-pages > div.container > div.collapse > ul  > li:first-of-type {
+	margin-left: 15px;
+}
+nav.navbar-gh-pages > div.container > div.collapse > ul  > li:not(:first-of-type) {
+	margin-left: 10px;
+}
+nav.navbar-gh-pages > div.container > div.collapse > ul  > li > a {
+	height: 25px;
+	padding: 2px 10px;
+	color: rgb(170, 170, 170);
+	font-size: 16px;
+}
+nav.navbar-gh-pages > div.container > div.collapse > ul  > li > a:hover {
+	border-left: 3px solid rgb(230, 230, 230);
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	padding-left: 7px;
+	background: inherit;
+	color: rgb(230, 230, 230);
+}
+nav.navbar-gh-pages > div.container > div.collapse > ul  > li > a:active {
+	border-left: 3px solid rgb(200, 200, 200);
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	padding-left: 7px;
+	color: rgb(200, 200, 200);
+}
+nav.navbar-gh-pages > div.container > div.collapse.navbar-collapse.in {
+	background: rgb(40, 40, 40);
+}
+nav.navbar-gh-pages > div.container > div.collapse.navbar-collapse.in > ul {
+	height: auto;
+	max-height: none;
+}
+nav.navbar-gh-pages > div.container > div.collapse.navbar-collapse.in > ul > li {
+	margin-left: 25px;
+}
+div.gh-pages-intro {
+	position: relative;
+	padding : 40px 5%;
+}
+div.gh-pages-intro > p {
+	font-size: 24px;
+	font-weight: normal;
+	text-align: center
+}
+div.gh-pages-intro > p:nth-of-type(3) {
+	position: relative;
+	margin-top: 60px;
+	padding-right: 10px;
+}
+div.gh-pages-intro > p > button {
+	position: relative;
+	top: 0;
+	left: 10px;
+	border: none;
+	border-radius: 25px;
+	width: 50px;
+	height: 50px;
+	background: rgb(40, 40, 40);
+	color: #888;
+}
+div.gh-pages-intro > p > button:hover {
+	color: #ccc;
+}
+div.gh-pages-intro > p > button:active {
+	border: none;
+	background: rgb(70, 70, 70);
+}
+div.gh-pages-intro > p > button::before {
+	font-family: 'Glyphicons Halflings';
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 1;
+	text-align: center;
+	vertical-align: middle;
+	content: "\e105";
+	
+	smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+div.gh-pages-intro > p:last-of-type {
+	position: relative;
+	margin-bottom: 140px;
+}
+div.gh-pages-intro > p:last-of-type::after {
+	position: absolute;
+	top: 40px;
+	left:20px;
+	right: 20px;
+	font-family: 'Glyphicons Halflings';
+	font-size: 100px;
+	font-weight: 400;
+	line-height: 1;
+	text-align: center;
+	vertical-align: middle;
+	content: "\e114";
+	
+	smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	-webkit-transform: scaleX(3.5) scaleY(0.7);
+	-moz-transform: scaleX(3.5) scaleY(0.7);
+	-o-transform: scaleX(3.5) scaleY(0.7);
+	transform: scaleX(3.5) scaleY(0.7);
+}
+footer {
+	position: relative;
+	display: inline-block;
+	top: 0;
+	padding: 0 30px;
+	width: 100%;
+}
+footer > ul {
+	margin-top: 100px;
+	position: inherit;
+	top: 0;
+	padding: 30px 30px;
+	width: 100%;
+	background: rgb(40, 40, 40);
+	
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	-o-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+footer > ul > li {
+	display: inline-block;
+	padding: 0 10px;
+	list-style-type: none;
+	
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+footer > ul > li[class^="brand-"],
+footer > ul > li[class*=" brand-"] {
+	font-size: 16px;
+	font-weight: bold;
+	float: left;
+}
+footer > ul > li > a {
+	color: #888;
+}
+footer > ul > li > a:hover {
+	color: #444;
+	text-decoration: none;
+}
+footer > ul.footer-nav {
+	position: absolute;
+	top: -10px;
+	right: 30px;
+	width: 57%;
+	background: transparent;
+}
+footer > ul.footer-nav > li {
+	border-right: 1px solid #888;
+	float: right;
+}
+footer > ul.footer-nav > li:last-of-type {
+	border-left: 1px solid #888;
+}
+footer > p {
+	padding: 0 30px;
+	color: #444;
+	float: right;
+}
+
+@media (min-width: 600px) and (max-width: 925px) {
+	footer > ul {
+		height: 100px;
+	}
+	footer > ul.footer-nav {
+		top: 40px;
+		width: 100%;
+	}
+}
+@media (max-width: 599px) {
+	footer > ul {
+		height: 200px;
+	}
+	footer > ul.footer-nav {
+		top: 60px;
+		padding: 0;
+		width: 100%;
+		
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	footer > ul.footer-nav > li {
+		margin-bottom: 5px;
+		margin-right: 45px;
+		width: 100%;
+		text-align: right;
+		
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+
+@media (max-width: 420px) {
+	footer > ul {
+		height: 220px;
+	}
+	footer > ul.footer-nav {
+		top: 80px;
+	}
+}
+
+@media (max-width: 420px) {
+	div.gh-pages-intro > p:last-of-type::after {
+		-webkit-transform: scaleX(2.5) scaleY(0.7);
+		-moz-transform: scaleX(2.5) scaleY(0.7);
+		-o-transform: scaleX(2.5) scaleY(0.7);
+		transform: scaleX(2.5) scaleY(0.7);
+	}
+	footer > ul {
+		height: 240px;
+	}
+	footer > ul.footer-nav {
+		top: 100px;
+	}
+}

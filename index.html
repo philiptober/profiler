@@ -5,14 +5,47 @@
 	<title>Profiler</title>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="gh-pages/css/gh-pages.css">
 	<link rel="stylesheet" type="text/css" href="source/css/profiler.css">
 </head>
 <body>
 	
+	<nav class="navbar navbar-gh-pages navbar-fixed-top" role="navigation">
+		<div class="container">
+		
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#profiler-nav">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">profiler</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="profiler-nav">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Syntax</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	
 	<div class="container col-md-12" style="padding-bottom: 60px;">
-		</br>
-		</br>	
-		<h1  style="text-align: center;font-weight: bold;">Profiler</h1>
+		
+		<div class="gh-pages-intro">
+			<p>This little snippet manages your user profiles.</p>
+			<p>It's able to show user specific data including roles in one view and to edit them in another.</p>
+			<p>
+				Use the guide 
+				<button></button>
+			</p>
+			<p>or</p>
+			<p>experiment yourself</p>
+		</div>
+		
 		<div class="col-md-8 col-md-offset-2">
 			<ul class="profiler">
 				<li>
@@ -73,6 +106,23 @@
 			</ul>
 		</div>
 	</div>
+	<footer>
+		<ul>
+			<li class="brand-bmm"><a href="http://philiptober.wordpress.com/">Broadening My Mind</a></li>
+			<!-- <li class="brand-pl"><a>philip's Lair</a></li> -->
+		</ul>
+		<ul class="footer-nav">		
+			<li><a>v0.1.0</a></li>
+			<li><a>About & Contact</a></li>
+			<li><a href="http://www.opensource.org/licenses/mit-license.php">License</a></li>
+			<li><a href="https://github.com/philiptober/profiler/issues">Report Issues</a></li>
+			<li><a href="https://github.com/philiptober/profiler">Repository</a></li>
+		</ul>
+		<p>
+			The profiler project is licensed under the MIT license. Copyright © 2014 Philip Tober.
+		</p>
+	</footer>
+	
 	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script src="source/js/profiler.js"></script>
