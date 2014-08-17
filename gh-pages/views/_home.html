@@ -1,0 +1,70 @@
+			<div class="gh-pages-intro">
+				<p>This little snippet manages your user profiles.</p>
+				<p>It's able to show user specific data including roles in one view and to edit them in another.</p>
+				<p>
+					Use the guide 
+					<button></button>
+				</p>
+				<p>or</p>
+				<p>experiment yourself</p>
+			</div>
+			
+			<div class="col-md-8 col-md-offset-2">
+				<ul class="profiler">
+					<li>
+						<input id="edit" class="control-view" type="checkbox"/>
+						<input id="editConfirm" class="control-edit" type="checkbox"/>
+						<input id="deleteConfirm" class="control-delete" type="checkbox"/>
+						<label class="glyphicon-edit" for="edit"></label>
+						<div class="view-data">
+							<h1>name@email.com</h1>
+							<p>Firstname </p>
+							<p>Lastname</p>
+							<p>********</p>
+							<ul>
+								<li class="glyphicon-user">Administrator</li>
+								<li class="glyphicon-user">Engineer</li>
+							</ul>
+						</div>
+						<div class="view-edit">
+							<input class="form-control" type="email" placeholder="E-Mail">
+							<input class="form-control" type="text" placeholder="Firstname">
+							<input class="form-control" type="text" placeholder="Lastname">
+							<input class="form-control" type="password" placeholder="Password">
+							<input class="form-control" type="password" placeholder="PW confirm">
+						</div>
+						<div class="view-image">
+							<span class="glyphicon-user"></span>
+							<input id="view-image" type="file">
+							<label class="glyphicon-plus" for="view-image"></label>
+						</div>
+						<div class="view-roles">
+							<h1>Choose the required roles...</h1>
+							<ul>
+								<li class="roles-add"></li>
+							</ul>
+							<ul>
+								<li class="glyphicon-user" value="1">Administrator</li>
+								<li class="glyphicon-user" value="2">Engineer</li>
+								<li class="glyphicon-user" value="3">Manager</li>
+								<li class="glyphicon-user" value="4">Secretary</li>
+							</ul>
+						</div>
+						<div class="view-control">
+							<label class="glyphicon-ok" for="editConfirm"></label>
+							<label class="glyphicon-remove" for="edit"></label>
+							<label class="glyphicon-trash" for="deleteConfirm"></label>
+						</div>
+						<div class="confirm-edit">
+							<p>Are you sure?</p>
+							<label data-multiplefor="edit,editConfirm">Confirm</label>
+							<label for="editConfirm">Abort</label>
+						</div>
+						<div class="confirm-delete">
+							<p>Are you sure?</p>
+							<label for="deleteConfirm">Confirm</label>
+							<label for="deleteConfirm">Abort</label>
+						</div>
+					</li>
+				</ul>
+			</div>
