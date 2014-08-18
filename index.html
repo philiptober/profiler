@@ -5,12 +5,9 @@
 	<title>Profiler</title>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="gh-pages/css/introjs.min.css">
 	<link rel="stylesheet" type="text/css" href="gh-pages/css/gh-pages.css">
 	<link rel="stylesheet" type="text/css" href="source/css/profiler.css">
-	
-	<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
-    <script src="gh-pages/js/app.js"></script>
 </head>
 <body ng-app="profilerApp">
 	
@@ -24,13 +21,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">profiler</a>
+				<a class="navbar-brand" ui-sref="home">profiler</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="profiler-nav">
 				<ul class="nav navbar-nav">
-					<li class="active"><a ui-sref="home">Home</a></li>
-					<li><a href="#">Syntax</a></li>
+					<li><a ui-sref="home">Home</a></li>
+					<li><a ui-sref="syntax">Syntax</a></li>
 				</ul>
 			</div>
 		</div>
@@ -59,9 +56,93 @@
 		</p>
 	</footer>
 	
+	<script type="text/ng-template" id="_home.html">
+		<div ng-controller="homeController" ng-intro-options="IntroOptions" 
+				  ng-intro-method="CallMe" ng-intro-onexit="ExitEvent">
+			<div class="gh-pages-intro">
+				<p>This little snippet manages your user profiles.</p>
+				<p>It's able to show user specific data including roles in one view and to edit them in another.</p>
+				<p>
+					Use the guide 
+					<button ng-click="CallMe()"></button>
+				</p>
+				<p>or</p>
+				<p>experiment yourself</p>
+			</div>
+			
+			<div class="col-md-8 col-md-offset-2">
+				<ul class="profiler">
+					<li data-step="1">
+						<input id="edit" class="control-view" type="checkbox"/>
+						<input id="editConfirm" class="control-edit" type="checkbox"/>
+						<input id="deleteConfirm" class="control-delete" type="checkbox"/>
+						<label class="glyphicon-edit" for="edit" data-step="7"></label>
+						<div class="view-data" data-step="2">
+							<h1>name@email.com</h1>
+							<p>Firstname </p>
+							<p>Lastname</p>
+							<p>********</p>
+							<ul data-step="3">
+								<li class="glyphicon-user">Administrator</li>
+								<li class="glyphicon-user">Engineer</li>
+							</ul>
+						</div>
+						<div class="view-edit" data-step="8">
+							<input class="form-control" type="email" placeholder="E-Mail">
+							<input class="form-control" type="text" placeholder="Firstname">
+							<input class="form-control" type="text" placeholder="Lastname">
+							<input class="form-control" type="password" placeholder="Password">
+							<input class="form-control" type="password" placeholder="PW confirm">
+						</div>
+						<div data-step="4&9" class="view-image">
+							<span class="glyphicon-user"></span>
+							<input id="view-image" type="file">
+							<label class="glyphicon-plus" for="view-image"></label>
+						</div>
+						<div class="view-roles" data-step="11">
+							<h1>Choose the required roles...</h1>
+							<ul data-step="12&14">
+								<li class="roles-add" data-step="10&13"></li>
+							</ul>
+							<ul>
+								<li class="glyphicon-user" value="1">Administrator</li>
+								<li class="glyphicon-user" value="2">Engineer</li>
+								<li class="glyphicon-user" value="3">Manager</li>
+								<li class="glyphicon-user" value="4">Secretary</li>
+							</ul>
+						</div>
+						<div class="view-control" data-step="15">
+							<label class="glyphicon-ok" for="editConfirm"></label>
+							<label class="glyphicon-remove" for="edit"></label>
+							<label class="glyphicon-trash" for="deleteConfirm" data-step="5"></label>
+						</div>
+						<div class="confirm-edit">
+							<p>Are you sure?</p>
+							<label data-multiplefor="edit,editConfirm" data-step="16">Confirm</label>
+							<label for="editConfirm">Abort</label>
+						</div>
+						<div class="confirm-delete" data-step="6">
+							<p>Are you sure?</p>
+							<label for="deleteConfirm">Confirm</label>
+							<label for="deleteConfirm">Abort</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</script>
+	
+	<script type="text/ng-template" id="_syntax.html">
+		
+	</script>
+	
 	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	
+	<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+	<script src="http://cdn.jsdelivr.net/intro.js/0.9.0/intro.min.js"></script>
+    <script src="gh-pages/js/angular-intro.min.js"></script>
+	<script src="gh-pages/js/app.js"></script>
 	<script src="source/js/profiler.js"></script>
 </body>
 </html>
