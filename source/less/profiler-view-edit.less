@@ -48,8 +48,13 @@ ul.profiler > li > div.view-edit {
 			border-bottom-right-radius: 0;
 		}
 		
+		&:nth-of-type(5) {
+			left: 33.3333%;
+			border-radius: 0;
+		}
+		
 		&:last-of-type {
-			left: 50%;
+			left: 66.6666%;
 			border-bottom-left-radius: 0;
 		}
 		
@@ -65,7 +70,8 @@ ul.profiler > li > div.view-edit {
 		}
 		
 		&:nth-of-type(2),
-		&:nth-of-type(4) {
+		&:nth-of-type(4),
+		&:nth-of-type(5) {
 			
 			&:focus {
 				border-right: 1px solid #ccc;
@@ -73,6 +79,7 @@ ul.profiler > li > div.view-edit {
 		}
 		
 		&:nth-of-type(4),
+		&:nth-of-type(5),
 		&:last-of-type {
 			top: 58px;
 			border-top-left-radius: 0;
@@ -82,6 +89,7 @@ ul.profiler > li > div.view-edit {
 		&:nth-of-type(2),
 		&:nth-of-type(3),
 		&:nth-of-type(4),
+		&:nth-of-type(5),
 		&:last-of-type {
 			display: inline-block;
 			height: 26px;
@@ -96,7 +104,7 @@ ul.profiler > li > div.view-edit {
 }
 
 ul.profiler > li > input.control-view:checked ~ div.view-edit {
-	width: 50%;
+	width: 54%;
 	height: 84px;
 	
 	-webkit-transition: width 0.5s ease-in;
@@ -124,15 +132,20 @@ ul.profiler > li > input.control-view:checked ~ div.view-edit {
 		}
 		
 		&:nth-of-type(2),
-		&:nth-of-type(4) {
+		&:nth-of-type(4),
+		&:nth-of-type(5) {
 			border-right: none;
 		}
 		
 		&:nth-of-type(2),
-		&:nth-of-type(3),
-		&:nth-of-type(4),
-		&:last-of-type {
+		&:nth-of-type(3) {
 			width: 50%;
+		}
+		
+		&:nth-of-type(4),
+		&:nth-of-type(5),
+		&:last-of-type {
+			width: 33.3333%;
 		}
 	}
 }
