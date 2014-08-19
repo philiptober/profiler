@@ -291,10 +291,31 @@ footer > ul > li[class*=" brand-"] {
 	float: left;
 }
 footer > ul > li > a {
+	position: relative;
 	color: #888;
 }
-footer > ul > li > a:hover {
-	color: #444;
+footer > ul > li.brand-bmm > a::before {
+	position: relative;
+	top: 3px;
+	margin-right: 4px;
+	color: #888;
+	font-family: 'icomoon';
+	speak: none;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	content: "\e61a";
+	
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+footer > ul > li > a:hover,
+footer > ul > li.brand-bmm > a:hover::before {
+	color: rgb(230, 230, 230);
 	text-decoration: none;
 }
 footer > ul.footer-nav {
@@ -375,4 +396,169 @@ footer > p {
 	footer > ul.footer-nav {
 		top: 100px;
 	}
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?8tl6fn');
+	src:url('../fonts/icomoon.eot?#iefix8tl6fn') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?8tl6fn') format('woff'),
+		url('../fonts/icomoon.ttf?8tl6fn') format('truetype'),
+		url('../fonts/icomoon.svg?8tl6fn#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icomoon-"], 
+[class*=" icomoon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icomoon-screen:before {
+	content: "\e600";
+}
+.icomoon-laptop:before {
+	content: "\e601";
+}
+.icomoon-mobile:before {
+	content: "\e602";
+}
+.icomoon-mobile2:before {
+	content: "\e603";
+}
+.icomoon-tablet:before {
+	content: "\e604";
+}
+.icomoon-tv:before {
+	content: "\e605";
+}
+.icomoon-google:before {
+	content: "\e606";
+}
+.icomoon-googleplus:before {
+	content: "\e607";
+}
+.icomoon-googleplus2:before {
+	content: "\e608";
+}
+.icomoon-googleplus3:before {
+	content: "\e609";
+}
+.icomoon-google-drive:before {
+	content: "\e60a";
+}
+.icomoon-facebook:before {
+	content: "\e60b";
+}
+.icomoon-facebook2:before {
+	content: "\e60c";
+}
+.icomoon-facebook3:before {
+	content: "\e60d";
+}
+.icomoon-twitter:before {
+	content: "\e60e";
+}
+.icomoon-twitter2:before {
+	content: "\e60f";
+}
+.icomoon-twitter3:before {
+	content: "\e610";
+}
+.icomoon-feed:before {
+	content: "\e611";
+}
+.icomoon-feed2:before {
+	content: "\e612";
+}
+.icomoon-feed3:before {
+	content: "\e613";
+}
+.icomoon-youtube:before {
+	content: "\e614";
+}
+.icomoon-youtube2:before {
+	content: "\e615";
+}
+.icomoon-github:before {
+	content: "\e616";
+}
+.icomoon-github2:before {
+	content: "\e617";
+}
+.icomoon-github3:before {
+	content: "\e618";
+}
+.icomoon-wordpress:before {
+	content: "\e619";
+}
+.icomoon-wordpress2:before {
+	content: "\e61a";
+}
+.icomoon-blogger:before {
+	content: "\e61b";
+}
+.icomoon-blogger2:before {
+	content: "\e61c";
+}
+.icomoon-tumblr:before {
+	content: "\e61d";
+}
+.icomoon-tumblr2:before {
+	content: "\e61e";
+}
+.icomoon-tux:before {
+	content: "\e61f";
+}
+.icomoon-apple:before {
+	content: "\e620";
+}
+.icomoon-finder:before {
+	content: "\e621";
+}
+.icomoon-android:before {
+	content: "\e622";
+}
+.icomoon-windows:before {
+	content: "\e623";
+}
+.icomoon-windows8:before {
+	content: "\e624";
+}
+.icomoon-skype:before {
+	content: "\e625";
+}
+.icomoon-html5:before {
+	content: "\e626";
+}
+.icomoon-html52:before {
+	content: "\e627";
+}
+.icomoon-css3:before {
+	content: "\e628";
+}
+.icomoon-chrome:before {
+	content: "\e629";
+}
+.icomoon-firefox:before {
+	content: "\e62a";
+}
+.icomoon-IE:before {
+	content: "\e62b";
+}
+.icomoon-opera:before {
+	content: "\e62c";
+}
+.icomoon-safari:before {
+	content: "\e62d";
 }
