@@ -177,6 +177,46 @@ div.gh-pages-intro > p:last-of-type::after {
 	-o-transform: scaleX(3.5) scaleY(0.7);
 	transform: scaleX(3.5) scaleY(0.7);
 }
+div.gh-pages-compatibility {
+	position: realtive;
+	display: block;
+	margin-top: 240px;
+	width: 100%;
+}
+div.gh-pages-compatibility > h1 {
+	margin-bottom: 40px;
+	padding: 0;
+	font-size: 34px;
+	font-weight: normal;
+	text-align: center;
+}
+div.gh-pages-compatibility > p {
+	font-size: 24px;
+	font-weight: normal;
+	text-align: center;
+}
+div.gh-pages-compatibility > p:last-of-type {
+	margin-top: 40px;
+}
+div.gh-pages-compatibility > p > span {
+	position: relative;
+	margin-right: 20px;
+	font-size: 80px;
+	text-align: center;
+}
+div.gh-pages-compatibility > p > span.icomoon-IE::after {
+	position: absolute;
+	right: 0;
+	bottom: -20px;
+	left: 0;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	content: "9-11";
+}
+div.gh-pages-compatibility > p > span.icomoon-safari {
+	color: rgb(170, 170, 170);
+}
 div.syntax-doc > div {
 	position: relative;
 }
@@ -218,7 +258,7 @@ div.syntax-doc > div > ul.profiler {
 	margin-top: 20px;
 	margin-bottom: 0;
 }
-syntax-doc > .highlight {
+div.syntax-doc .highlight {
 	position: relative;
 	top: -20px;
 	padding:14px 14px;
@@ -229,7 +269,7 @@ syntax-doc > .highlight {
 	border-left:1px solid #ccc;
 	border-radius:4px;
 }
-syntax-doc > .highlight > pre {
+div.syntax-doc .highlight > pre {
 	padding:0;
 	margin-top:0;
 	margin-bottom:0;
@@ -237,21 +277,21 @@ syntax-doc > .highlight > pre {
 	word-wrap:nowrap;
 	white-space:nowrap;
 }
-syntax-doc > .highlight > pre > code {
+div.syntax-doc .highlight > pre > code {
 	padding-left: 20px;
 	color:#333;
 }
-syntax-doc > .highlight > pre > code:first-child {
+div.syntax-doc .highlight > pre > code:first-child {
 	display:inline-block;
 	padding-right:45px;
 }
-syntax-doc > .highlight > pre > code > span.nt {
+div.syntax-doc .highlight > pre > code > span.nt {
 	color: #3460A6;
 }
-syntax-doc > .highlight > pre > code > span.na {
+div.syntax-doc .highlight > pre > code > span.na {
 	color: #CF5E20;
 }
-syntax-doc > .highlight > pre > code > span.s {
+div.syntax-doc .highlight > pre > code > span.s {
 	color: #A65650;
 }
 footer {
