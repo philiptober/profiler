@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="gh-pages/css/introjs.min.css">
 	<link rel="stylesheet" type="text/css" href="gh-pages/css/gh-pages.css">
+	<link rel="stylesheet" type="text/css" href="gh-pages/css/html-code.css">
 	<link rel="stylesheet" type="text/css" href="source/css/profiler.css">
 </head>
 <body ng-app="profilerApp">
@@ -79,8 +80,8 @@
 						<label class="glyphicon-edit" for="edit" data-step="7"></label>
 						<div class="view-data" data-step="2">
 							<h1>name@email.com</h1>
-							<p>Firstname </p>
-							<p>Lastname</p>
+							<p>Forename</p>
+							<p>Surname</p>
 							<p>********</p>
 							<ul data-step="3">
 								<li class="glyphicon-user">Administrator</li>
@@ -89,9 +90,10 @@
 						</div>
 						<div class="view-edit" data-step="8">
 							<input class="form-control" type="email" placeholder="E-Mail">
-							<input class="form-control" type="text" placeholder="Firstname">
-							<input class="form-control" type="text" placeholder="Lastname">
-							<input class="form-control" type="password" placeholder="Password">
+							<input class="form-control" type="text" placeholder="Forename">
+							<input class="form-control" type="text" placeholder="Surname">
+							<input class="form-control" type="password" placeholder="Old PW">
+							<input class="form-control" type="password" placeholder="New PW">
 							<input class="form-control" type="password" placeholder="PW confirm">
 						</div>
 						<div data-step="4&9" class="view-image">
@@ -133,7 +135,450 @@
 	</script>
 	
 	<script type="text/ng-template" id="_syntax.html">
-		
+		<div class="syntax-doc container col-md-8 col-md-offset-2">
+			
+			<div>
+				<h1>The whole snippet with one list item</h1>
+				<p>When using this snippet, you may change the order of the div-elements inside an item, 
+					but it's important to always place the first 4 elements inside the list item at the beginning 
+					using the order of the sample.
+				</p>
+				<ul class="profiler">
+					<li>
+						<input id="edit" class="control-view" type="checkbox"/>
+						<input id="editConfirm" class="control-edit" type="checkbox"/>
+						<input id="deleteConfirm" class="control-delete" type="checkbox"/>
+						<label class="glyphicon-edit" for="edit"></label>
+						<div class="view-data">
+							<h1>name@email.com</h1>
+							<p>Forename</p>
+							<p>Surname</p>
+							<p>********</p>
+							<ul>
+								<li class="glyphicon-user">Administrator</li>
+								<li class="glyphicon-user">Engineer</li>
+							</ul>
+						</div>
+						<div class="view-edit">
+							<input class="form-control" type="email" placeholder="E-Mail">
+							<input class="form-control" type="text" placeholder="Forename">
+							<input class="form-control" type="text" placeholder="Surname">
+							<input class="form-control" type="password" placeholder="Old PW">
+							<input class="form-control" type="password" placeholder="New PW">
+							<input class="form-control" type="password" placeholder="PW confirm">
+						</div>
+						<div class="view-image">
+							<span class="glyphicon-user"></span>
+							<input id="view-image" type="file">
+							<label class="glyphicon-plus" for="view-image"></label>
+						</div>
+						<div class="view-roles">
+							<h1>Choose the required roles...</h1>
+							<ul>
+								<li class="roles-add"></li>
+							</ul>
+							<ul>
+								<li class="glyphicon-user" value="1">Administrator</li>
+								<li class="glyphicon-user" value="2">Engineer</li>
+								<li class="glyphicon-user" value="3">Manager</li>
+								<li class="glyphicon-user" value="4">Secretary</li>
+							</ul>
+						</div>
+						<div class="view-control">
+							<label class="glyphicon-ok" for="editConfirm"></label>
+							<label class="glyphicon-remove" for="edit"></label>
+							<label class="glyphicon-trash" for="deleteConfirm"></label>
+						</div>
+						<div class="confirm-edit">
+							<p>Are you sure?</p>
+							<label data-multiplefor="edit,editConfirm">Confirm</label>
+							<label for="editConfirm">Abort</label>
+						</div>
+						<div class="confirm-delete">
+							<p>Are you sure?</p>
+							<label for="deleteConfirm">Confirm</label>
+							<label for="deleteConfirm">Abort</label>
+						</div>
+					</li>
+				</ul>
+				<div class="highlight">
+					<pre>
+						<code class="html">
+<span class="nt">&#60;ul</span> <span class="na">class=</span><span class="s">"profiler"</span><span class="nt">&#62;</span>
+  <span class="nt">&#60;li&#62;</span>
+    <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"edit"</span> <span class="na">class=</span><span class="s">"control-view"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
+    <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"editConfirm"</span> <span class="na">class=</span><span class="s">"control-view"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
+    <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"deleteConfirm"</span> <span class="na">class=</span><span class="s">"control-view"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
+    <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-edit"</span> <span class="na">for=</span><span class="s">"edit"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-data"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;h1&#62;</span>name@email.com<span class="nt">&#60;/hi&#62;</span>
+      <span class="nt">&#60;p&#62;</span>Forename<span class="nt">&#60;/p&#62;</span>
+      <span class="nt">&#60;p&#62;</span>Surname<span class="nt">&#60;/p&#62;</span>
+      <span class="nt">&#60;p&#62;</span>********<span class="nt">&#60;/p&#62;</span>
+      <span class="nt">&#60;ul&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Administrator<span class="nt">&#60;/li&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Engineer<span class="nt">&#60;/li&#62;</span>
+      <span class="nt">&#60;/ul&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-edit"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Email"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Forename"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Surname"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"Old PW"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"New PW"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"PW Confirm"</span><span class="nt">/&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-image"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;span</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">&#62;</span><span class="nt">&#60;/span&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"view-image"</span> <span class="na">type=</span><span class="s">"file"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-plus"</span> <span class="na">for=</span><span class="s">"view-image"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-roles"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;h1&#62;</span>Choose the required roles...<span class="nt">&#60;/hi&#62;</span>
+      <span class="nt">&#60;ul&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"roles-add"</span><span class="nt">/&#62;</span><span class="nt">&#60;/li&#62;</span>
+      <span class="nt">&#60;/ul&#62;</span>
+      <span class="nt">&#60;ul&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Administrator<span class="nt">&#60;/li&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Engineer<span class="nt">&#60;/li&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Manager<span class="nt">&#60;/li&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Secretary<span class="nt">&#60;/li&#62;</span>
+      <span class="nt">&#60;/ul&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-control"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-ok"</span> <span class="na">for=</span><span class="s">"editConfirm"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-remove"</span> <span class="na">for=</span><span class="s">"edit"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-trash"</span> <span class="na">for=</span><span class="s">"deleteConfirm"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"confirm-edit"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;p&#62;</span>Are you sure?<span class="nt">&#60;/p&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">data-multiplefor=</span><span class="s">"edit,editConfirm"</span><span class="nt">&#62;</span>Confirm<span class="nt">&#60;/label&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">for=</span><span class="s">"editConfirm"</span><span class="nt">&#62;</span>Abort<span class="nt">&#60;/label&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"confirm-delete"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;p&#62;</span>Are you sure?<span class="nt">&#60;/p&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">for=</span><span class="s">"deleteConfirm"</span><span class="nt">&#62;</span>Confirm<span class="nt">&#60;/label&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">for=</span><span class="s">"deleteConfirm"</span><span class="nt">&#62;</span>Abort<span class="nt">&#60;/label&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+  <span class="nt">&#60;/li&#62;</span>
+<span class="nt">&#60;/ul&#62;</span>
+						</code>
+					</pre>
+				</div>
+			</div>
+			
+			<div>
+				<h1>The wrapper and list items</h1>
+				<p>The wrapper consists of opening and closening <em>ul</em>-elements. Then defining the class 
+					<em>profiler</em> the styles for profiler will be applied. After that you can insert as many 
+					list items as you need.
+				</p>
+				<ul class="profiler">
+					<li></li>
+					<li></li>
+				</ul>
+				<div class="highlight">
+					<pre>
+						<code class="html">
+<span class="nt">&#60;ul</span> <span class="na">class=</span><span class="s">"profiler"</span><span class="nt">&#62;</span>
+  <span class="nt">&#60;li&#62;</span>
+    ...
+  <span class="nt">&#60;/li&#62;</span>
+  <span class="nt">&#60;li&#62;</span>
+    ...
+  <span class="nt">&#60;/li&#62;</span>
+<span class="nt">&#60;/ul&#62;</span>
+						</code>
+					</pre>
+				</div>
+			</div>
+			
+			<div>
+				<h1>The invisible controls</h1>
+				<p>As already mentioned, the first 4 elements inside the list element should always be positioned 
+					like sample dictates. This is important, because ignoring that will break the CSS-rules. Besides, 
+					you are placing the first control responsible for switching between data- and edit-view.
+				</p>
+				<ul class="profiler">
+					<li>
+						<input id="edit1" class="control-view" type="checkbox"/>
+						<input id="editConfirm1" class="control-edit" type="checkbox"/>
+						<input id="deleteConfirm1" class="control-delete" type="checkbox"/>
+						<label class="glyphicon-edit" for="edit1"></label>
+					</li>
+				</ul>
+				<div class="highlight">
+					<pre>
+						<code class="html">
+<span class="nt">&#60;ul</span> <span class="na">class=</span><span class="s">"profiler"</span><span class="nt">&#62;</span>
+  <span class="nt">&#60;li&#62;</span>
+    <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"edit"</span> <span class="na">class=</span><span class="s">"control-view"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
+    <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"editConfirm"</span> <span class="na">class=</span><span class="s">"control-view"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
+    <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"deleteConfirm"</span> <span class="na">class=</span><span class="s">"control-view"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
+    <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-edit"</span> <span class="na">for=</span><span class="s">"edit"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+    ...
+  <span class="nt">&#60;/li&#62;</span>
+<span class="nt">&#60;/ul&#62;</span>
+						</code>
+					</pre>
+				</div>
+			</div>
+			
+			<div>
+				<h1>The visible controls</h1>
+				<p>In addition to the 'invisible' controls, this <em>div</em>-block is responsible for displaying 
+					the other controls. They show confirm-views and switch back from edit- to data-view. The class
+					<em>view-control</em> defines this block.<br><br><em>For the Sample to show all controls, the 
+					'invisible' controls are also used. This may happen again in future samples.</em>
+				</p>
+				<ul class="profiler">
+					<li>
+						<input id="edit2" class="control-view" type="checkbox"/>
+						<input id="editConfirm2" class="control-edit" type="checkbox"/>
+						<input id="deleteConfirm2" class="control-delete" type="checkbox"/>
+						<label class="glyphicon-edit" for="edit2"></label>
+						<div class="view-control">
+							<label class="glyphicon-ok" for="editConfirm2"></label>
+							<label class="glyphicon-remove" for="edit2"></label>
+							<label class="glyphicon-trash" for="deleteConfirm2"></label>
+						</div>
+					</li>
+				</ul>
+				<div class="highlight">
+					<pre>
+						<code class="html">
+<span class="nt">&#60;ul</span> <span class="na">class=</span><span class="s">"profiler"</span><span class="nt">&#62;</span>
+  <span class="nt">&#60;li&#62;</span>
+    ...
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-control"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-ok"</span> <span class="na">for=</span><span class="s">"editConfirm"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-remove"</span> <span class="na">for=</span><span class="s">"edit"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-trash"</span> <span class="na">for=</span><span class="s">"deleteConfirm"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    ...
+  <span class="nt">&#60;/li&#62;</span>
+<span class="nt">&#60;/ul&#62;</span>
+						</code>
+					</pre>
+				</div>
+			</div>
+			
+			<div>
+				<h1>The profile data</h1>
+				<p>Using this view, marked with the class <em>view-data</em>, this <em>div</em>-block contains
+					the account specific data of the displayed profile including the assigned roles.
+				</p>
+				<ul class="profiler">
+					<li>
+						<div class="view-data">
+							<h1>name@email.com</h1>
+							<p>Forename</p>
+							<p>Surname</p>
+							<p>********</p>
+							<ul>
+								<li class="glyphicon-user">Administrator</li>
+								<li class="glyphicon-user">Engineer</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div class="highlight">
+					<pre>
+						<code class="html">
+<span class="nt">&#60;ul</span> <span class="na">class=</span><span class="s">"profiler"</span><span class="nt">&#62;</span>
+  <span class="nt">&#60;li&#62;</span>
+    ...
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-data"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;h1&#62;</span>name@email.com<span class="nt">&#60;/hi&#62;</span>
+      <span class="nt">&#60;p&#62;</span>Forename<span class="nt">&#60;/p&#62;</span>
+      <span class="nt">&#60;p&#62;</span>Surname<span class="nt">&#60;/p&#62;</span>
+      <span class="nt">&#60;p&#62;</span>********<span class="nt">&#60;/p&#62;</span>
+      <span class="nt">&#60;ul&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Administrator<span class="nt">&#60;/li&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Engineer<span class="nt">&#60;/li&#62;</span>
+      <span class="nt">&#60;/ul&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    ...
+  <span class="nt">&#60;/li&#62;</span>
+<span class="nt">&#60;/ul&#62;</span>
+						</code>
+					</pre>
+				</div>
+			</div>
+			
+			<div>
+				<h1>The edit-view</h1>
+				<p>Wanting to change some information, you switch into the edit view. It's declared with the known 
+					<em>div</em> and the class <em>view-edit</em>. Also, it's build on 6 <em>input</em>-elements.
+				</p>
+				<ul class="profiler">
+					<li>
+						<input class="control-view" type="checkbox" checked/>
+						<div class="view-edit">
+							<input class="form-control" type="email" placeholder="E-Mail">
+							<input class="form-control" type="text" placeholder="Forename">
+							<input class="form-control" type="text" placeholder="Surname">
+							<input class="form-control" type="password" placeholder="Old PW">
+							<input class="form-control" type="password" placeholder="New PW">
+							<input class="form-control" type="password" placeholder="PW confirm">
+						</div>
+					</li>
+				</ul>
+				<div class="highlight">
+					<pre>
+						<code class="html">
+<span class="nt">&#60;ul</span> <span class="na">class=</span><span class="s">"profiler"</span><span class="nt">&#62;</span>
+  <span class="nt">&#60;li&#62;</span>
+    ...
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-edit"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Email"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Forename"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Surname"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"Old PW"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"New PW"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"PW Confirm"</span><span class="nt">/&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    ...
+  <span class="nt">&#60;/li&#62;</span>
+<span class="nt">&#60;/ul&#62;</span>
+						</code>
+					</pre>
+				</div>
+			</div>
+			
+			<div>
+				<h1>Editing the roles</h1>
+				<p>Yet again you use a <em>div</em> and decorate it with the <em>view-roles</em>-class. 
+					In the edit-view you start off with the button to switch to the real roles-view. It's
+					declared in the first list being the <em>roles-add-item</em>. The list items will increase 
+					and decrease in response to the selected roles. The second list marks the available roles
+					to choose from. You have to set values for the javascript to properly work. Their also is a 
+					headline to define. The headline is displayed at the top of the roles-view.
+				</p>
+				<ul class="profiler">
+					<li>
+						<input class="control-view" type="checkbox" checked/>
+						<div class="view-roles">
+							<h1>Choose the required roles...</h1>
+							<ul>
+								<li class="roles-add"></li>
+							</ul>
+							<ul>
+								<li class="glyphicon-user" value="1">Administrator</li>
+								<li class="glyphicon-user" value="2">Engineer</li>
+								<li class="glyphicon-user" value="3">Manager</li>
+								<li class="glyphicon-user" value="4">Secretary</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div class="highlight">
+					<pre>
+						<code class="html">
+<span class="nt">&#60;ul</span> <span class="na">class=</span><span class="s">"profiler"</span><span class="nt">&#62;</span>
+  <span class="nt">&#60;li&#62;</span>
+    ...
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-roles"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;h1&#62;</span>Choose the required roles...<span class="nt">&#60;/hi&#62;</span>
+      <span class="nt">&#60;ul&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"roles-add"</span><span class="nt">/&#62;</span><span class="nt">&#60;/li&#62;</span>
+      <span class="nt">&#60;/ul&#62;</span>
+      <span class="nt">&#60;ul&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Administrator<span class="nt">&#60;/li&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Engineer<span class="nt">&#60;/li&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Manager<span class="nt">&#60;/li&#62;</span>
+        <span class="nt">&#60;li</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">/&#62;</span>Secretary<span class="nt">&#60;/li&#62;</span>
+      <span class="nt">&#60;/ul&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    ...
+  <span class="nt">&#60;/li&#62;</span>
+<span class="nt">&#60;/ul&#62;</span>
+						</code>
+					</pre>
+				</div>
+			</div>
+			
+			<div>
+				<h1>Placing an image</h1>
+				<p>Sadly this feature isn't ready yet. Although it will follow in the next version. Right now
+					a <em>span</em> displays an icon and using the edit-view you can add a file in an input 
+					clicking the icon. Use the <em>view-image</em>-class to set the CSS rules.
+				</p>
+				<ul class="profiler">
+					<li>
+						<input class="control-view" type="checkbox" checked/>
+						<div class="view-image">
+							<span class="glyphicon-user"></span>
+							<input id="view-image" type="file">
+							<label class="glyphicon-plus" for="view-image"></label>
+						</div>
+					</li>
+				</ul>
+				<div class="highlight">
+					<pre>
+						<code class="html">
+<span class="nt">&#60;ul</span> <span class="na">class=</span><span class="s">"profiler"</span><span class="nt">&#62;</span>
+  <span class="nt">&#60;li&#62;</span>
+    ...
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-image"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;span</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">&#62;</span><span class="nt">&#60;/span&#62;</span>
+      <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"view-image"</span> <span class="na">type=</span><span class="s">"file"</span><span class="nt">/&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-plus"</span> <span class="na">for=</span><span class="s">"view-image"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    ...
+  <span class="nt">&#60;/li&#62;</span>
+<span class="nt">&#60;/ul&#62;</span>
+						</code>
+					</pre>
+				</div>
+			</div>
+			
+			<div>
+				<h1>Last but not least the confirm-view</h1>
+				<p>Whenever applying breaking changes to a profile, their should be a verification. In the event of this,
+					the confirm-view asks you again to affirm the change. Use the classes <em>confirm-edit</em> and 
+					<em>confirm-delete</em> to build the two confirm-views.
+				</p>
+				<ul class="profiler">
+					<li>
+						<input class="control-edit" type="checkbox" checked/>
+						<div class="confirm-edit">
+							<p>Are you sure?</p>
+							<label data-multiplefor="">Confirm</label>
+							<label for="">Abort</label>
+						</div>
+						<div class="confirm-delete">
+							<p>Are you sure?</p>
+							<label for="">Confirm</label>
+							<label for="">Abort</label>
+						</div>
+					</li>
+				</ul>
+				<div class="highlight">
+					<pre>
+						<code class="html">
+<span class="nt">&#60;ul</span> <span class="na">class=</span><span class="s">"profiler"</span><span class="nt">&#62;</span>
+  <span class="nt">&#60;li&#62;</span>
+    ...
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"confirm-edit"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;p&#62;</span>Are you sure?<span class="nt">&#60;/p&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">data-multiplefor=</span><span class="s">"edit,editConfirm"</span><span class="nt">&#62;</span>Confirm<span class="nt">&#60;/label&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">for=</span><span class="s">"editConfirm"</span><span class="nt">&#62;</span>Abort<span class="nt">&#60;/label&#62;</span>
+    <span class="nt">&#60;/div&#62;</span>
+    <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"confirm-delete"</span><span class="nt">&#62;</span>
+      <span class="nt">&#60;p&#62;</span>Are you sure?<span class="nt">&#60;/p&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">for=</span><span class="s">"deleteConfirm"</span><span class="nt">&#62;</span>Confirm<span class="nt">&#60;/label&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">for=</span><span class="s">"deleteConfirm"</span><span class="nt">&#62;</span>Abort<span class="nt">&#60;/label&#62;</span>
+    <span class="nt">&#60;/div&#62;</span
+    ...
+  <span class="nt">&#60;/li&#62;</span>
+<span class="nt">&#60;/ul&#62;</span>
+						</code>
+					</pre>
+				</div>
+			</div>
+			
+		</div>
 	</script>
 	
 	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
