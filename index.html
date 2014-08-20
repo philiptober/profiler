@@ -7,32 +7,13 @@
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="gh-pages/css/introjs.min.css">
 	<link rel="stylesheet" type="text/css" href="gh-pages/css/gh-pages.css">
-	<link rel="stylesheet" type="text/css" href="gh-pages/css/html-code.css">
 	<link rel="stylesheet" type="text/css" href="source/css/profiler.css">
 </head>
 <body ng-app="profilerApp">
 	
-	<nav class="navbar navbar-gh-pages navbar-fixed-top" role="navigation">
-		<div class="container">
+	<div ui-view="navigation">
 		
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#profiler-nav">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" ui-sref="home">profiler</a>
-			</div>
-
-			<div class="collapse navbar-collapse" id="profiler-nav">
-				<ul class="nav navbar-nav">
-					<li><a ui-sref="home">Home</a></li>
-					<li><a ui-sref="syntax">Syntax</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	</div>
 	
 	<div class="container col-md-12" style="padding-bottom: 60px;">
 		<div ui-view>
@@ -46,9 +27,9 @@
 			<!-- <li class="brand-pl"><a>philip's Lair</a></li> -->
 		</ul>
 		<ul class="footer-nav">		
-			<li><a>v0.1.0</a></li>
+			<li><a ui-sref="history">v0.1.0</a></li>
 			<li><a>About & Contact</a></li>
-			<li><a href="http://www.opensource.org/licenses/mit-license.php">License</a></li>
+			<li><a href="https://github.com/philiptober/profiler/blob/gh-pages/LICENSE">License</a></li>
 			<li><a href="https://github.com/philiptober/profiler/issues">Report Issues</a></li>
 			<li><a href="https://github.com/philiptober/profiler">Repository</a></li>
 		</ul>
@@ -56,6 +37,31 @@
 			The profiler project is licensed under the MIT license. Copyright © 2014 Philip Tober.
 		</p>
 	</footer>
+	
+	<script type="text/ng-template" id="_navigation.html">
+		<nav class="navbar navbar-gh-pages navbar-fixed-top" role="navigation">
+			<div class="container">
+			
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#profiler-nav">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" ui-sref="home">profiler</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="profiler-nav">
+					<ul class="nav navbar-nav">
+						<li ng-class="{active: currentState=='home'}"><a ui-sref="home">Home</a></li>
+						<li ng-class="{active: currentState=='syntax'}"><a ui-sref="syntax">Syntax</a></li>
+						<li ng-class="{active: currentState=='history'}"><a ui-sref="history">History</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</script>
 	
 	<script type="text/ng-template" id="_home.html">
 		<div ng-controller="homeController" ng-intro-options="IntroOptions" 
@@ -147,8 +153,14 @@
 	</script>
 	
 	<script type="text/ng-template" id="_syntax.html">
+		<div class="prerequisites col-md-6 col-md-offset-3">
+			<h1>Prerequisites</h1>
+			<ul>
+				<li><a href="http://jquery.com/">jQuery</a></li>
+				<li><a href="http://getbootstrap.com/">Twitter Bootstrap</a></li>
+			</ul>
+		</div>
 		<div class="syntax-doc container col-md-8 col-md-offset-2">
-			
 			<div>
 				<h1>The whole snippet with one list item</h1>
 				<p>When using this snippet, you may change the order of the div-elements inside an item, 
@@ -590,6 +602,60 @@
 				</div>
 			</div>
 			
+		</div>
+	</script>
+	
+	<script type="text/ng-template" id="_history.html">
+		<div class="gh-pages-history col-md-8 col-md-offset-2">
+			<h1>History</h1>
+			<ul class="timeline">
+				<li>
+					<div class="timeline-badge warning"><i class="glyphicon glyphicon-edit"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h4 class="timeline-title">Upcoming features</h4>
+						</div>
+						<div class="timeline-body">
+							<ul>
+								<li>adaptivity for different resolutions [v0.2.0]</li>
+								<li>view-image with real image and fall-back icon [v0.2.0]</li>
+								<li>different color themes [v0.3.0]</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h4 class="timeline-title">Features v0.1.0</h4>
+							<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> published 16.08.2014</small></p>
+						</div>
+						<div class="timeline-body"><p>
+							<ul>
+								<li>view for account specific data incl. roles</li>
+								<li>view for editing account data</li>
+								<li>view for editing roles (custom select box)</li>
+								<li>view for account image (still but a span containing an icon)</li>
+								<li>controls to navigate between views</li>
+								<li>confirm-views for confirming editing or deleting</li>
+								<li>crossbrowser compatibility</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="timeline-badge info"><i class="glyphicon glyphicon-eye-open"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h4 class="timeline-title">Credits</h4>
+						</div>
+						<div class="timeline-body">
+							<p>Inspired by <a href="http://bootsnipp.com/snippets/featured/event-list">http://bootsnipp.com/snippets/featured/event-list</a></p> 
+						</div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</script>
 	

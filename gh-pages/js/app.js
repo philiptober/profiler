@@ -8,16 +8,56 @@ profilerApp.config(function($stateProvider, $urlRouterProvider) {
         
         .state('home', {
             url: '/home',
-            templateUrl: '_home.html',
-			controller: 'homeController'
+            views: 
+			{
+				'':
+				{
+					templateUrl: '_home.html',
+					controller: 'homeController'
+				},
+				'navigation':
+				{
+					templateUrl: '_navigation.html',
+					controller: 'navigationController'
+				}
+			}
         })
         
-		
         .state('syntax', {
             url: '/syntax',
-            templateUrl: '_syntax.html'
-        });
+			views:
+			{
+				'':
+				{
+					templateUrl: '_syntax.html'
+				},
+				'navigation':
+				{
+					templateUrl: '_navigation.html',
+					controller: 'navigationController'
+				}
+			}
+        })
         
+        .state('history', {
+            url: '/history',
+			views:
+			{
+				'':
+				{
+					templateUrl: '_history.html'
+				},
+				'navigation':
+				{
+					templateUrl: '_navigation.html',
+					controller: 'navigationController'
+				}
+			}
+        });
+});
+
+profilerApp.controller('navigationController', function ($scope, $state) {
+	$scope.currentState = $state.current.name;
 });
 
 profilerApp.controller('homeController', function ($scope) {
