@@ -158,7 +158,7 @@ profilerApp.controller('homeController', function ($scope) {
 			},
 			{
 				element: document.querySelector('[data-step="12&14"]'),
-				intro: "Your choosen roles are display here."
+				intro: "Your chosen roles are display here."
 			},
 			{
 				element: document.querySelector('[data-step="15"]'),
