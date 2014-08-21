@@ -20,7 +20,7 @@ the snippet for account management
 This snippet is about managing accounts in form of a list. You'll be able to look up information in one view and edit them in another. The different views are mainly triggered via label-checkbox-controls. This means more CSS and less JS.
 
 ## Prerequisites
-+ [Twitter Bootstrap](http://getbootstrap.com/)
++ [Bootstrap](http://getbootstrap.com/)
 + [jQuery](http://jquery.com/)
 
 ## Features
@@ -35,8 +35,10 @@ This snippet is about managing accounts in form of a list. You'll be able to loo
 + crossbrowser compatibility
 
 ### Upcoming Features
-+ adaptivity for different resolutions *[0.2]*
-+ different color themes *[0.3]*
++ a new control/button to (de)activate a profile *[v0.2.0]*
++ view-image with real image and fall-back icon *[v0.2.0]*
++ adaptivity for different resolutions - a better responsive design *[0.3]*
++ different color themes *[0.4]*
 
 ### Compatibility
 + Chrome
