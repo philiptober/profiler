@@ -55,6 +55,7 @@
 				<div class="collapse navbar-collapse" id="profiler-nav">
 					<ul class="nav navbar-nav">
 						<li ng-class="{active: currentState=='home'}"><a ui-sref="home">Home</a></li>
+						<li ng-class="{active: currentState=='getIt'}"><a ui-sref="getIt">Get it</a></li>
 						<li ng-class="{active: currentState=='syntax'}"><a ui-sref="syntax">Syntax</a></li>
 						<li ng-class="{active: currentState=='history'}"><a ui-sref="history">History</a></li>
 					</ul>
@@ -152,14 +153,25 @@
 		</div>
 	</script>
 	
+	<script type="text/ng-template" id="_getIt.html">
+		<div class="gh-pages-get-it container col-md-8 col-md-offset-2">
+			<h1>Get it</h1>
+			<div class="downloads">
+				<a class="glyphicon-download-alt" href="https://github.com/philiptober/profiler/archive/gh-pages.zip"></a>
+				<div>or</div>
+				<a class="icomoon-github" href="https://github.com/philiptober/profiler"></a>
+			</div>
+			<div class="prerequisites">
+				<h2>Prerequisites</h2>
+				<ul>
+					<li><a href="http://jquery.com/">jQuery</a></li>
+					<li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+				</ul>
+			</div>
+		<div>
+	</script>
+	
 	<script type="text/ng-template" id="_syntax.html">
-		<div class="prerequisites col-md-6 col-md-offset-3">
-			<h1>Prerequisites</h1>
-			<ul>
-				<li><a href="http://jquery.com/">jQuery</a></li>
-				<li><a href="http://getbootstrap.com/">Twitter Bootstrap</a></li>
-			</ul>
-		</div>
 		<div class="syntax-doc container col-md-8 col-md-offset-2">
 			<div>
 				<h1>The whole snippet with one list item</h1>

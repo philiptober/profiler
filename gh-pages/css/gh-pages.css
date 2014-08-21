@@ -217,6 +217,141 @@ div.gh-pages-compatibility > p > span.icomoon-IE::after {
 div.gh-pages-compatibility > p > span.icomoon-safari {
 	color: rgb(170, 170, 170);
 }
+div.gh-pages-get-it > h1 {
+	margin-top: 40px;
+	padding: 0;
+	font-size: 50px;
+	font-weight: normal;
+	text-align: center;
+}
+div.gh-pages-get-it > div.downloads {
+	position: relative;
+	margin-top: 60px;
+	border: 3px solid rgb(40, 40, 40);
+	border-radius: 20px;
+	padding: 40px;
+	text-align: center;
+}
+div.gh-pages-get-it > div.downloads > a {
+	position: relative;
+	display: inline-block;
+	right: 0;
+	left: 0;
+	border-radius: 20px;
+	width: 160px;
+	height: 160px;
+	vertical-align: middle;
+}
+div.gh-pages-get-it > div.downloads > a.glyphicon-download-alt:hover::after {
+	content: "Download"
+}
+div.gh-pages-get-it > div.downloads > a.icomoon-github:hover::after {
+	content: "Visit GitHub"
+}
+div.gh-pages-get-it > div.downloads > a.glyphicon-download-alt::before {
+	left: 5px;
+}
+div.gh-pages-get-it > div.downloads > a:hover {
+	background-color: rgb(40, 40, 40);
+	text-decoration: none;
+}
+div.gh-pages-get-it > div.downloads > a:hover::before {
+	color: #fff;
+}
+div.gh-pages-get-it > div.downloads > a:hover::after {
+	position: absolute;
+	right: 0;
+	bottom: -30px;
+	left: 0;
+	margin-top: 0;
+	padding-top: 0;
+	width: 160px;
+	color: rgb(40, 40, 40);
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: center;
+}
+div.gh-pages-get-it > div.downloads > a::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding-top: 20px;
+	width: 160px;
+	height: 160px;
+	color: rgb(40, 40, 40);
+	font-size: 120px;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	text-align: center;
+	
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	smoothing: antialiased;
+}
+div.gh-pages-get-it > div.downloads > a[class^="glyphicon-"]::before, 
+div.gh-pages-get-it > div.downloads > a[class*=" glyphicon-"]::before {
+	font-family: 'Glyphicons Halflings';
+}
+div.gh-pages-get-it > div.downloads > a[class^="icomoon-"]::before, 
+div.gh-pages-get-it > div.downloads > a[class*=" icomoon-"]::before {
+	font-family: 'icomoon';
+}
+div.gh-pages-get-it > div.downloads > div {
+	position: relative;
+	display: inline-block;
+	right: 0;
+	left: 0;
+	padding-right: 50px;
+	padding-left: 50px;
+	font-size: 50px;
+	vertical-align: middle;
+}
+div.gh-pages-get-it > div.prerequisites {
+	margin-top: 100px;
+}
+div.gh-pages-get-it > div.prerequisites > ul {
+	text-align: center;
+	list-style-type: none;
+}
+div.gh-pages-get-it > div.prerequisites > h2::before {
+	margin-right: 4px;
+	font-family: 'Glyphicons Halflings';
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 1;
+	text-align: center;
+	content: "\e135";
+	
+	-webkit-font-smoothing: antialiased;
+	smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+div.gh-pages-get-it > div.prerequisites {
+	position: relative;
+	margin-bottom: 60px;
+}
+div.gh-pages-get-it > div.prerequisites > h2 {
+	margin-bottom: 40px;
+	padding: 0;
+	font-size: 36px;
+	font-weight: normal;
+	text-align: center;
+}
+div.gh-pages-get-it > div.prerequisites > ul {
+	padding: 0;
+	font-size: 24px;
+}
+div.gh-pages-get-it > div.prerequisites > ul > li > a {
+	color: rgb(40, 40, 40);
+}
+
 div.syntax-doc > div {
 	position: relative;
 }
@@ -295,44 +430,6 @@ div.syntax-doc .highlight > pre > code > span.na {
 }
 div.syntax-doc .highlight > pre > code > span.s {
 	color: #A65650;
-}
-div.prerequisites {
-	margin-top: 20px;
-}
-div.prerequisites > ul {
-	text-align: center;
-	list-style-type: none;
-}
-div.prerequisites > ul > li > a::before {
-	margin-right: 4px;
-	font-family: 'Glyphicons Halflings';
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 1;
-	text-align: center;
-	content: "\e144";
-	
-	-webkit-font-smoothing: antialiased;
-	smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-div.prerequisites {
-	position: relative;
-	margin-bottom: 60px;
-}
-div.prerequisites > h1 {
-	margin-bottom: 40px;
-	padding: 0;
-	font-size: 36px;
-	font-weight: normal;
-	text-align: center;
-}
-div.prerequisites > ul {
-	padding: 0;
-	font-size: 24px;
-}
-div.prerequisites > ul > li > a {
-	color: rgb(40, 40, 40);
 }
 div.gh-pages-history > h1 {
 	margin-top: 40px;

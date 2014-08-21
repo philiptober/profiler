@@ -23,6 +23,22 @@ profilerApp.config(function($stateProvider, $urlRouterProvider) {
 			}
         })
         
+		.state('getIt', {
+            url: '/getIt',
+            views: 
+			{
+				'':
+				{
+					templateUrl: '_getIt.html'
+				},
+				'navigation':
+				{
+					templateUrl: '_navigation.html',
+					controller: 'navigationController'
+				}
+			}
+        })
+		
         .state('syntax', {
             url: '/syntax',
 			views:
