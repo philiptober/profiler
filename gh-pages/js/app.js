@@ -1,7 +1,9 @@
 var profilerApp = angular.module('profilerApp', ['angular-intro', 'ui.router']);
 
-profilerApp.config(function($stateProvider, $urlRouterProvider) {
+profilerApp.config(function($stateProvider, $urlRouterProvider, $uiViewScrollProvider) {
     
+	$uiViewScrollProvider.useAnchorScroll();
+	
     $urlRouterProvider.otherwise('/home');
     
     $stateProvider
@@ -88,9 +90,9 @@ profilerApp.config(function($stateProvider, $urlRouterProvider) {
         });
 });
 
-profilerApp.controller('navigationController', function ($scope, $state) {
+profilerApp.controller('navigationController', ['$scope', '$state', function ($scope, $state) {
 	$scope.currentState = $state.current.name;
-});
+}]);
 
 profilerApp.controller('homeController', function ($scope) {
     
