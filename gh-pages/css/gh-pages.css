@@ -940,3 +940,8 @@ div.gh-pages-about-contact > div.contact > div {
 .timeline-body > p + p {
   margin-top: 5px;
 }
+
+div#disqus_thread {
+	margin-top: 80px;
+	padding-bottom: 0;
+}
