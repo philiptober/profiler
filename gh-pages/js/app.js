@@ -69,6 +69,22 @@ profilerApp.config(function($stateProvider, $urlRouterProvider) {
 					controller: 'navigationController'
 				}
 			}
+        })
+		
+		.state('about', {
+            url: '/about',
+			views:
+			{
+				'':
+				{
+					templateUrl: '_about.html'
+				},
+				'navigation':
+				{
+					templateUrl: '_navigation.html',
+					controller: 'navigationController'
+				}
+			}
         });
 });
 

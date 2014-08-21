@@ -580,6 +580,48 @@ footer > p {
 		transform: rotate(0deg);
 	}
 }
+div.gh-pages-about-contact > h1 {
+	margin-top: 40px;
+	padding: 0;
+	font-size: 50px;
+	font-weight: normal;
+	text-align: center;
+}
+div.gh-pages-about-contact > div.about {
+	position: relative;
+	margin-top: 120px;
+	border: 3px solid rgb(40, 40, 40);
+	border-radius: 20px;
+	padding: 40px;
+	text-align: center;
+}
+div.gh-pages-about-contact > div.about > h2 {
+	display: inline-block;
+	border-bottom: 3px solid rgb(40, 40, 40);
+	padding-bottom: 15px;
+	width: 97%;
+	color: rgb(40, 40, 40);
+	font-size: 30px;
+	text-align: center;
+}
+div.gh-pages-about-contact > div.about > p {
+	padding-top: 15px;
+	color: rgb(40, 40, 40);
+}
+div.gh-pages-about-contact > div.contact {
+	position: relative;
+	display: inline-block;
+	margin-top: 40px;
+	padding: 40px;
+}
+div.gh-pages-about-contact > div.contact > h2 {
+	display: inline-block;
+	color: rgb(40, 40, 40);
+	font-size: 30px;
+}
+div.gh-pages-about-contact > div.contact > div {
+	display: inline-block;
+}
 
 @media (max-width: 420px) {
 	footer > ul {
