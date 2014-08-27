@@ -355,6 +355,14 @@ ul.profiler > li > div.view-image {
   height: 120px;
   background: #ff7537;
 }
+ul.profiler > li > div.view-image > img {
+  position: absolute;
+  width: 119px;
+  height: 120px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: center;
+}
 ul.profiler > li > div.view-image > span {
   display: block;
   padding: 10px;
