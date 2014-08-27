@@ -69,6 +69,36 @@ ul.profiler > li > div.view-control {
 			}
 		}
 		
+		&:nth-of-type(4) {
+			top: 0;
+			padding: 10px;
+			width: 40px;
+			color: @control-active-off;
+			font-size: 20px;
+			
+			-webkit-transition: padding 0.5s ease-in,
+								width 0.5s ease-in,
+								font-size 0.5s ease-in;
+			-moz-transition: padding 0.5s ease-in,
+							 width 0.5s ease-in,
+							 font-size 0.5s ease-in;
+			-o-transition: padding 0.5s ease-in,
+						   width 0.5s ease-in,
+						   font-size 0.5s ease-in;
+			transition: padding 0.5s ease-in,
+						width 0.5s ease-in,
+						font-size 0.5s ease-in;
+			
+			&:hover {
+				color: @control-active-off-text;
+				background: @control-active-off;
+			}
+			
+			&:active {
+				background: @control-active-off-shade;
+			}
+		}
+		
 		&:first-of-type,
 		&:nth-of-type(2) {
 			padding: 0;
@@ -100,7 +130,28 @@ ul.profiler > li > input.control-view:checked ~ div.view-control {
 	
 	> label {
 		
-		&:nth-of-type(3) {
+		&:first-of-type,
+		&:nth-of-type(2) {
+			padding: 10px;
+			width: 40px;
+			font-size: 20px;
+			
+			-webkit-transition: padding 0.5s ease-in,
+								width 0.5s ease-in,
+								font-size 0.5s ease-in;
+			-moz-transition: padding 0.5s ease-in,
+							 width 0.5s ease-in,
+							 font-size 0.5s ease-in;
+			-o-transition: padding 0.5s ease-in,
+						   width 0.5s ease-in,
+						   font-size 0.5s ease-in;
+			transition: padding 0.5s ease-in,
+						width 0.5s ease-in,
+						font-size 0.5s ease-in;
+		}
+		
+		&:nth-of-type(3),
+		&:nth-of-type(4) {
 			padding: 0;
 			width: 0;
 			font-size: 0;
@@ -118,12 +169,48 @@ ul.profiler > li > input.control-view:checked ~ div.view-control {
 						width 0.5s ease-in,
 						font-size 0.5s ease-in;
 		}
-		
-		&:first-of-type,
-		&:nth-of-type(2) {
-			padding: 10px;
-			width: 40px;
-			font-size: 20px;
+	}
+}
+
+ul.profiler > li > input.control-active:checked ~ div.view-control {
+
+	> label {
+	
+		&:nth-of-type(4) {
+			color: @control-active-on;
+			
+			&:hover {
+				color: @control-active-on-text;
+				background: @control-active-on;
+			}
+			
+			&:active {
+				background: @control-active-on-shade;
+			}
+			
+			&::before {
+				-webkit-transform-origin: 50% 58%;
+				-ms-transform-origin:50% 58%; /* IE 9 */
+				transform-origin:50% 58%;
+				
+				-webkit-animation: control-active-spin 1.3s infinite linear;
+				-moz-animation: control-active-spin 1.3s infinite linear;
+				-o-animation: control-active-spin 1.3s infinite linear;
+				animation: control-active-spin 1.3s infinite linear;
+			}
+		}
+	}
+}
+
+ul.profiler > li > input.control-view:checked ~ input.control-active:checked ~ div.view-control,
+ul.profiler > li > input.control-active:checked ~ input.control-view:checked ~ div.view-control {
+			
+	> label {
+
+		&:nth-of-type(4) {
+			padding: 0;
+			width: 0;
+			font-size: 0;
 			
 			-webkit-transition: padding 0.5s ease-in,
 								width 0.5s ease-in,
