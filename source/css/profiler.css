@@ -1,3 +1,35 @@
+@-webkit-keyframes control-active-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes control-active-spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-o-keyframes control-active-spin {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(360deg);
+  }
+}
+@keyframes control-active-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 ul.profiler {
   position: relative;
   width: 100%;
@@ -15,7 +47,8 @@ ul.profiler > li {
 }
 ul.profiler > li > input.control-view,
 ul.profiler > li > input.control-edit,
-ul.profiler > li > input.control-delete {
+ul.profiler > li > input.control-delete,
+ul.profiler > li > input.control-active {
   visibility: hidden;
   position: absolute;
   top: 48px;
@@ -822,6 +855,24 @@ ul.profiler > li > div.view-control > label:nth-of-type(3):hover {
 ul.profiler > li > div.view-control > label:nth-of-type(3):active {
   background: #c62e1b;
 }
+ul.profiler > li > div.view-control > label:nth-of-type(4) {
+  top: 0;
+  padding: 10px;
+  width: 40px;
+  color: #c2c2c2;
+  font-size: 20px;
+  -webkit-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -moz-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -o-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+}
+ul.profiler > li > div.view-control > label:nth-of-type(4):hover {
+  color: #ffffff;
+  background: #c2c2c2;
+}
+ul.profiler > li > div.view-control > label:nth-of-type(4):active {
+  background: #888888;
+}
 ul.profiler > li > div.view-control > label:first-of-type,
 ul.profiler > li > div.view-control > label:nth-of-type(2) {
   padding: 0;
@@ -841,7 +892,18 @@ ul.profiler > li > div.view-control > label[class*=" glyphicon-"] {
   smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-ul.profiler > li > input.control-view:checked ~ div.view-control > label:nth-of-type(3) {
+ul.profiler > li > input.control-view:checked ~ div.view-control > label:first-of-type,
+ul.profiler > li > input.control-view:checked ~ div.view-control > label:nth-of-type(2) {
+  padding: 10px;
+  width: 40px;
+  font-size: 20px;
+  -webkit-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -moz-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  -o-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+  transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
+}
+ul.profiler > li > input.control-view:checked ~ div.view-control > label:nth-of-type(3),
+ul.profiler > li > input.control-view:checked ~ div.view-control > label:nth-of-type(4) {
   padding: 0;
   width: 0;
   font-size: 0;
@@ -850,11 +912,31 @@ ul.profiler > li > input.control-view:checked ~ div.view-control > label:nth-of-
   -o-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
   transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
 }
-ul.profiler > li > input.control-view:checked ~ div.view-control > label:first-of-type,
-ul.profiler > li > input.control-view:checked ~ div.view-control > label:nth-of-type(2) {
-  padding: 10px;
-  width: 40px;
-  font-size: 20px;
+ul.profiler > li > input.control-active:checked ~ div.view-control > label:nth-of-type(4) {
+  color: #cca6ac;
+}
+ul.profiler > li > input.control-active:checked ~ div.view-control > label:nth-of-type(4):hover {
+  color: #ffffff;
+  background: #cca6ac;
+}
+ul.profiler > li > input.control-active:checked ~ div.view-control > label:nth-of-type(4):active {
+  background: #a3858a;
+}
+ul.profiler > li > input.control-active:checked ~ div.view-control > label:nth-of-type(4)::before {
+  -webkit-transform-origin: 50% 58%;
+  -ms-transform-origin: 50% 58%;
+  /* IE 9 */
+  transform-origin: 50% 58%;
+  -webkit-animation: control-active-spin 1.3s infinite linear;
+  -moz-animation: control-active-spin 1.3s infinite linear;
+  -o-animation: control-active-spin 1.3s infinite linear;
+  animation: control-active-spin 1.3s infinite linear;
+}
+ul.profiler > li > input.control-view:checked ~ input.control-active:checked ~ div.view-control > label:nth-of-type(4),
+ul.profiler > li > input.control-active:checked ~ input.control-view:checked ~ div.view-control > label:nth-of-type(4) {
+  padding: 0;
+  width: 0;
+  font-size: 0;
   -webkit-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
   -moz-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
   -o-transition: padding 0.5s ease-in, width 0.5s ease-in, font-size 0.5s ease-in;
