@@ -1,81 +1,83 @@
-function contains(targetSubString, targetString) 
-{
-	if ( targetString === undefined || targetString == null )
-		return false;
-		
-	if ( targetString.indexOf(targetSubString) >= 0 )
-		return true;
-	else
-		return false;
-}
-
-$( document ).on('click', '[data-multiplefor]', function() 
-{
-	var targets = $(this).attr("data-multiplefor").split(',');
-	
-	for (j = 0; j < targets.length; j++) 
+(function(){
+	function contains(targetSubString, targetString) 
 	{
-		$('#' + targets[j]).prop('checked',
-			function(i, oldVal) { return !oldVal; });
-	}
-});
-
-$( document ).on('click', 'ul.profiler > li > div.view-roles > ul > li.roles-add', function()
-{
-	var self = $( this );
-	
-	var marker = self.parent().parent().parent();
-	var markerClasses = marker.attr('class');
-	
-	if ( contains('checked', markerClasses) )
-		marker.removeClass('checked');
-	else
-		marker.addClass('checked');
-});
-
-$( document ).on('click', 'ul.profiler > li > div.view-roles > ul:nth-of-type(2) > li', function() {
-	var self = $( this );
-	var selfClasses = self.attr('class');
-	var selfValue = self.attr('value');
-	
-	var mirrorDirective = self.parent().parent().children('ul:first-of-type');
-	var mirror = mirrorDirective.children('li[value=\"' + selfValue + '\"]');
-	
-	if ( contains('checked', selfClasses) )
-	{
-		if (mirror.length > 0)
-			mirror.fadeOut('slow', function() {$(this).remove()});
+		if ( targetString === undefined || targetString == null )
+			return false;
 			
-		self.removeClass('checked');
+		if ( targetString.indexOf(targetSubString) >= 0 )
+			return true;
+		else
+			return false;
 	}
-	else
+
+	$( document ).on('click', '[data-multiplefor]', function() 
 	{
-		$(self.prop('outerHTML')).hide().prependTo(mirrorDirective).fadeIn('slow');
-	
-		self.addClass('checked');
-	}
-});
+		var targets = $(this).attr("data-multiplefor").split(',');
+		
+		for (j = 0; j < targets.length; j++) 
+		{
+			$('#' + targets[j]).prop('checked',
+				function(i, oldVal) { return !oldVal; });
+		}
+	});
 
-$( document ).on('change', 'ul.profiler > li > div.view-image > input', function() {
-	$( this ).parent().children('label')[0].innerText = $( this )[0].files[0].name;
-});
+	$( document ).on('click', 'ul.profiler > li > div.view-roles > ul > li.roles-add', function()
+	{
+		var self = $( this );
+		
+		var marker = self.parent().parent().parent();
+		var markerClasses = marker.attr('class');
+		
+		if ( contains('checked', markerClasses) )
+			marker.removeClass('checked');
+		else
+			marker.addClass('checked');
+	});
+
+	$( document ).on('click', 'ul.profiler > li > div.view-roles > ul:nth-of-type(2) > li', function() {
+		var self = $( this );
+		var selfClasses = self.attr('class');
+		var selfValue = self.attr('value');
+		
+		var mirrorDirective = self.parent().parent().children('ul:first-of-type');
+		var mirror = mirrorDirective.children('li[value=\"' + selfValue + '\"]');
+		
+		if ( contains('checked', selfClasses) )
+		{
+			if (mirror.length > 0)
+				mirror.fadeOut('slow', function() {$(this).remove()});
+				
+			self.removeClass('checked');
+		}
+		else
+		{
+			$(self.prop('outerHTML')).hide().prependTo(mirrorDirective).fadeIn('slow');
+		
+			self.addClass('checked');
+		}
+	});
+
+	$( document ).on('change', 'ul.profiler > li > div.view-image > input', function() {
+		$( this ).parent().children('label')[0].innerText = $( this )[0].files[0].name;
+	});
 
 
 
-if (!('placeholder' in document.createElement('input'))) {
-  $("[placeholder]").on('focus',function() {
-		var a = $(this);
-		if (a.val() == a.attr("placeholder"))
-			a.val("").css('color','rgb(85, 85, 85)');
-	}).on('blur',function() {
-		var a = $(this);
-		if (a.val() == "" || a.val() == a.attr("placeholder"))
-			a.val(a.attr("placeholder")).css('color','#999');
-	}).on('blur().parents("form").submit',function() {
-		$(this).find("[placeholder]").each(function() {
+	if (!('placeholder' in document.createElement('input'))) {
+	  $("[placeholder]").on('focus',function() {
 			var a = $(this);
 			if (a.val() == a.attr("placeholder"))
-				a.val("");
+				a.val("").css('color','rgb(85, 85, 85)');
+		}).on('blur',function() {
+			var a = $(this);
+			if (a.val() == "" || a.val() == a.attr("placeholder"))
+				a.val(a.attr("placeholder")).css('color','#999');
+		}).on('blur().parents("form").submit',function() {
+			$(this).find("[placeholder]").each(function() {
+				var a = $(this);
+				if (a.val() == a.attr("placeholder"))
+					a.val("");
+			});
 		});
-	});
-};
+	};
+}).call(this);
