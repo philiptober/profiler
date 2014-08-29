@@ -1,12 +1,14 @@
-# profiler v0.1
+# profiler v0.2.0
 the snippet for account management
 
 ## Contents
 
 - [Intro](#intro)
+- [Demo](#demo)
 - [Prerequisites](#prerequisites)
 - [Features](#features)
   - [New Features](#new-features)
+  - [All Features](#all-features)
   - [Upcoming Features](#upcoming-features)
   - [Compatibility](#compatibility)
 - [Bugs](#bugs)
@@ -19,6 +21,9 @@ the snippet for account management
 ## Intro
 This snippet is about managing accounts in form of a list. You'll be able to look up information in one view and edit them in another. The different views are mainly triggered via label-checkbox-controls. This means more CSS and less JS.
 
+## Demo
+Visit my demo website [gh-pages](http://philiptober.github.io/profiler/#/home)
+
 ## Prerequisites
 + [Bootstrap](http://getbootstrap.com/)
 + [jQuery](http://jquery.com/)
@@ -26,6 +31,14 @@ This snippet is about managing accounts in form of a list. You'll be able to loo
 ## Features
 
 ### New Features
++ a new control/button to (de)activate a profile
++ possibility to add an image
++ javascript inside a plugin instead of 'loose' javascript
+
+### All Features
++ a new control/button to (de)activate a profile
++ possibility to add an image
++ javascript inside a plugin instead of 'loose' javascript
 + view for account specific data incl. roles
 + view for editing account data
 + view for editing roles (custom select box)
