@@ -63,6 +63,7 @@ Visit my demo website [gh-pages](http://philiptober.github.io/profiler/#/home)
 *Every Browser was tested with Windows 8.1*
 
 ## Bugs
+***Safari***
 + **roles-view:** the selectable roles aren't displayed at the right locations
 + selected and owned roles don't hide their borders
 
