@@ -27,7 +27,7 @@
 			<!-- <li class="brand-pl"><a>philip's Lair</a></li> -->
 		</ul>
 		<ul class="footer-nav">		
-			<li><a ui-sref="history">v0.1.0</a></li>
+			<li><a ui-sref="history">v0.2.0</a></li>
 			<li><a ui-sref="about">About</a></li>
 			<li><a href="https://github.com/philiptober/profiler/blob/gh-pages/LICENSE">License</a></li>
 			<li><a href="https://github.com/philiptober/profiler/issues">Report Issues</a></li>
@@ -106,7 +106,7 @@
 						</div>
 						<div data-step="4&11" class="view-image">
 							<span class="glyphicon-user"></span>
-							<!-- <img class="glyphicon-user" src="gh-pages/img/bild.jpg"></img> -->
+							<!-- <img src="gh-pages/img/bild.jpg"></img> -->
 							<input id="view-image" type="file">
 							<label class="glyphicon-plus" for="view-image"></label>
 						</div>
@@ -215,6 +215,7 @@
 						<input id="edit" class="control-view" type="checkbox"/>
 						<input id="editConfirm" class="control-edit" type="checkbox"/>
 						<input id="deleteConfirm" class="control-delete" type="checkbox"/>
+						<input id="activeConfirm" class="control-active" type="checkbox"/>
 						<label class="glyphicon-edit" for="edit"></label>
 						<div class="view-data">
 							<h1>name@email.com</h1>
@@ -236,6 +237,7 @@
 						</div>
 						<div class="view-image">
 							<span class="glyphicon-user"></span>
+							<img src="gh-pages/img/bild.jpg"></img>
 							<input id="view-image" type="file">
 							<label class="glyphicon-plus" for="view-image"></label>
 						</div>
@@ -255,6 +257,7 @@
 							<label class="glyphicon-ok" for="editConfirm"></label>
 							<label class="glyphicon-remove" for="edit"></label>
 							<label class="glyphicon-trash" for="deleteConfirm"></label>
+							<label class="glyphicon-cog" for="activeConfirm"></label>
 						</div>
 						<div class="confirm-edit">
 							<p>Are you sure?</p>
@@ -276,6 +279,7 @@
     <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"edit"</span> <span class="na">class=</span><span class="s">"control-view"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
     <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"editConfirm"</span> <span class="na">class=</span><span class="s">"control-edit"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
     <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"deleteConfirm"</span> <span class="na">class=</span><span class="s">"control-delete"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
+    <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"activeConfirm"</span> <span class="na">class=</span><span class="s">"control-active"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
     <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-edit"</span> <span class="na">for=</span><span class="s">"edit"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
     <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-data"</span><span class="nt">&#62;</span>
       <span class="nt">&#60;h1&#62;</span>name@email.com<span class="nt">&#60;/h1&#62;</span>
@@ -297,6 +301,7 @@
     <span class="nt">&#60;/div&#62;</span>
     <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-image"</span><span class="nt">&#62;</span>
       <span class="nt">&#60;span</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">&#62;</span><span class="nt">&#60;/span&#62;</span>
+      <span class="nt">&#60;img</span> <span class="na">src=</span><span class="s">"gh-pages/img/bild.jpg"</span><span class="nt">&#62;</span><span class="nt">&#60;/image&#62;</span>
       <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"view-image"</span> <span class="na">type=</span><span class="s">"file"</span><span class="nt">/&#62;</span>
       <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-plus"</span> <span class="na">for=</span><span class="s">"view-image"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
     <span class="nt">&#60;/div&#62;</span>
@@ -316,6 +321,7 @@
       <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-ok"</span> <span class="na">for=</span><span class="s">"editConfirm"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
       <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-remove"</span> <span class="na">for=</span><span class="s">"edit"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
       <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-trash"</span> <span class="na">for=</span><span class="s">"deleteConfirm"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-cog"</span> <span class="na">for=</span><span class="s">"activeConfirm"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
     <span class="nt">&#60;/div&#62;</span>
     <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"confirm-edit"</span><span class="nt">&#62;</span>
       <span class="nt">&#60;p&#62;</span>Are you sure?<span class="nt">&#60;/p&#62;</span>
@@ -371,6 +377,7 @@
 						<input id="edit1" class="control-view" type="checkbox"/>
 						<input id="editConfirm1" class="control-edit" type="checkbox"/>
 						<input id="deleteConfirm1" class="control-delete" type="checkbox"/>
+						<input id="activeConfirm1" class="control-active" type="checkbox"/>
 						<label class="glyphicon-edit" for="edit1"></label>
 					</li>
 				</ul>
@@ -382,6 +389,7 @@
     <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"edit"</span> <span class="na">class=</span><span class="s">"control-view"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
     <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"editConfirm"</span> <span class="na">class=</span><span class="s">"control-edit"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
     <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"deleteConfirm"</span> <span class="na">class=</span><span class="s">"control-delete"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
+    <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"activeConfirm"</span> <span class="na">class=</span><span class="s">"control-active"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&#62;</span>
     <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-edit"</span> <span class="na">for=</span><span class="s">"edit"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
     ...
   <span class="nt">&#60;/li&#62;</span>
@@ -394,7 +402,8 @@
 			<div>
 				<h1>The visible controls</h1>
 				<p>In addition to the 'invisible' controls, this <em>div</em>-block is responsible for displaying 
-					the other controls. They show confirm-views and switch back from edit- to data-view. The class
+					the other controls. They show confirm-views and switch back from edit- to data-view. Also, it enables
+					you to activate or deactivate a profile with the button in the top right corner. The class
 					<em>view-control</em> defines this block.<br><br><em>For the Sample to show all controls, the 
 					'invisible' controls are also used. This may happen again in future samples.</em>
 				</p>
@@ -403,11 +412,13 @@
 						<input id="edit2" class="control-view" type="checkbox"/>
 						<input id="editConfirm2" class="control-edit" type="checkbox"/>
 						<input id="deleteConfirm2" class="control-delete" type="checkbox"/>
+						<input id="activeConfirm2" class="control-active" type="checkbox"/>
 						<label class="glyphicon-edit" for="edit2"></label>
 						<div class="view-control">
 							<label class="glyphicon-ok" for="editConfirm2"></label>
 							<label class="glyphicon-remove" for="edit2"></label>
 							<label class="glyphicon-trash" for="deleteConfirm2"></label>
+							<label class="glyphicon-cog" for="activeConfirm2"></label>
 						</div>
 					</li>
 				</ul>
@@ -421,6 +432,7 @@
       <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-ok"</span> <span class="na">for=</span><span class="s">"editConfirm"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
       <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-remove"</span> <span class="na">for=</span><span class="s">"edit"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
       <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-trash"</span> <span class="na">for=</span><span class="s">"deleteConfirm"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
+      <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-cog"</span> <span class="na">for=</span><span class="s">"activeConfirm"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
     <span class="nt">&#60;/div&#62;</span>
     ...
   <span class="nt">&#60;/li&#62;</span>
@@ -567,15 +579,25 @@
 			
 			<div>
 				<h1>Placing an image</h1>
-				<p>Sadly this feature isn't ready yet. Although it will follow in the next version. Right now
-					a <em>span</em> displays an icon and using the edit-view you can add a file in an input 
-					clicking the icon. Use the <em>view-image</em>-class to set the CSS rules.
+				<p>Using this view, you can either display an icon or an image. The line containing the img-tag in the snippet 
+					below can be added or discarded to your liking. You can also add an image into an input. All you have to do 
+					is clicking the icon/image while using the edit-view. To ensures the appropriate CSS rules, apply The 
+					<em>view-image</em>-class.
 				</p>
 				<ul class="profiler">
 					<li>
 						<input class="control-view" type="checkbox" checked/>
 						<div class="view-image">
 							<span class="glyphicon-user"></span>
+							<input id="view-image" type="file">
+							<label class="glyphicon-plus" for="view-image"></label>
+						</div>
+					</li>
+					<li>
+						<input class="control-view" type="checkbox" checked/>
+						<div class="view-image">
+							<span class="glyphicon-user"></span>
+							<img src="gh-pages/img/bild.jpg"></img>
 							<input id="view-image" type="file">
 							<label class="glyphicon-plus" for="view-image"></label>
 						</div>
@@ -589,6 +611,7 @@
     ...
     <span class="nt">&#60;div</span> <span class="na">class=</span><span class="s">"view-image"</span><span class="nt">&#62;</span>
       <span class="nt">&#60;span</span> <span class="na">class=</span><span class="s">"glyphicon-user"</span><span class="nt">&#62;</span><span class="nt">&#60;/span&#62;</span>
+      <span class="nt">&#60;img</span> <span class="na">src=</span><span class="s">"gh-pages/img/bild.jpg"</span><span class="nt">&#62;</span><span class="nt">&#60;/image&#62;</span>
       <span class="nt">&#60;input</span> <span class="na">id=</span><span class="s">"view-image"</span> <span class="na">type=</span><span class="s">"file"</span><span class="nt">/&#62;</span>
       <span class="nt">&#60;label</span> <span class="na">class=</span><span class="s">"glyphicon-plus"</span> <span class="na">for=</span><span class="s">"view-image"</span><span class="nt">&#62;</span><span class="nt">&#60;/label&#62;</span>
     <span class="nt">&#60;/div&#62;</span>
@@ -660,10 +683,24 @@
 						</div>
 						<div class="timeline-body">
 							<ul>
-								<li>a new control/button to (de)activate a profile [v0.2.0]</li>
-								<li>view-image with real image and fall-back icon [v0.2.0]</li>
 								<li>adaptivity for different resolutions [v0.3.0]</li>
 								<li>different color themes [v0.4.0]</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h4 class="timeline-title">Features v0.2.0</h4>
+							<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> published 29.08.2014</small></p>
+						</div>
+						<div class="timeline-body"><p>
+							<ul>
+								<li>a new control/button to (de)activate a profile</li>
+								<li>possibility to add an image</li>
+								<li>javascript inside a plugin instead of 'loose' javascript</li>
 							</ul>
 						</div>
 					</div>
